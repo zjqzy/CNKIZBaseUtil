@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CNKI_Z_BaseSDK"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "CNKI 基础库 iOS"
 
 
