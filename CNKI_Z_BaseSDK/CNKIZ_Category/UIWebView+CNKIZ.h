@@ -37,7 +37,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIWebView (clean)
+@interface UIWebView (CNKIZ)
 
 /**
  Getting the current document's title

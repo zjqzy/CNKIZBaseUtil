@@ -1,14 +1,11 @@
 //
-//  NSInvocation+SimpleCreation.m
-//  MAPI
-//
-//  Created by Tiago Alves on 08/12/13.
-//  Copyright (c) 2013 Iterar. All rights reserved.
+//  NSInvocation+CNKIZ.m
 //
 
-#import "NSInvocation+SimpleCreation.h"
 
-@implementation NSInvocation (SimpleCreation)
+#import "NSInvocation+CNKIZ.h"
+
+@implementation NSInvocation (CNKIZ)
 
 + (NSInvocation*)invocationWithTarget:(id)target andSelector:(SEL)selector {
     

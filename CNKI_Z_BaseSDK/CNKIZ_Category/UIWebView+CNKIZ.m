@@ -35,9 +35,9 @@
  
  */
 
-#import "UIWebView+Clean.h"
+#import "UIWebView+CNKIZ.h"
 
-@implementation UIWebView (clean)
+@implementation UIWebView (CNKIZ)
 
 - (NSString *)documentTitle
 {

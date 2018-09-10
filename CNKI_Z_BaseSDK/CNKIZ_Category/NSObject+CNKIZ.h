@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (Association)
+@interface NSObject (CNKIZ)
 
 
 /**

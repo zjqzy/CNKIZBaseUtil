@@ -1,5 +1,5 @@
 //
-//  CLLocation+ZJQLocation.m
+//  CLLocation+CNKIZ.m
 //  
 //
 //  Created by zhujianqi on 16/2/26.
@@ -12,7 +12,7 @@ void transform_earth_from_mars(double lat, double lng, double* tarLat, double* t
 void transform_mars_from_baidu(double lat, double lng, double* tarLat, double* tarLng);
 void transform_baidu_from_mars(double lat, double lng, double* tarLat, double* tarLng);
 
-@implementation CLLocation (ZJQLocation)
+@implementation CLLocation (CNKIZ)
 
 - (CLLocation*)locationMarsFromEarth
 {

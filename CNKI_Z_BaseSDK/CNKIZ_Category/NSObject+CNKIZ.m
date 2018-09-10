@@ -4,9 +4,9 @@
 
 #import <objc/runtime.h>
 
-#import "NSObject+Association.h"
+#import "NSObject+CNKIZ.h"
 
-@implementation NSObject (Association)
+@implementation NSObject (CNKIZ)
 
 static char associatedObjectsKey;
 
