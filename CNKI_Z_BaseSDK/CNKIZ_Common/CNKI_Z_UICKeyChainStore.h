@@ -1,14 +1,10 @@
 //
-//  UICKeyChainStore.h
-//  UICKeyChainStore
-//
-//  Created by Kishikawa Katsumi on 11/11/20.
-//  Copyright (c) 2011 Kishikawa Katsumi. All rights reserved.
+//  CNKI_Z_UICKeyChainStore.h
 //
 /*
  
- 用法说明
- ht tps://github.com/kishikawakatsumi/UICKeyChainStore
+ 说明
+ https://github.com/kishikawakatsumi/UICKeyChainStore
  
  */
 
@@ -106,7 +102,7 @@ typedef NS_ENUM(NSInteger, UICKeyChainStoreAuthenticationPolicy) {
     UICKeyChainStoreAuthenticationPolicyUserPresence = kSecAccessControlUserPresence,
 };
 
-@interface UICKeyChainStore : NSObject
+@interface CNKI_Z_UICKeyChainStore : NSObject
 
 @property (nonatomic, readonly) UICKeyChainStoreItemClass itemClass;
 
@@ -132,12 +128,12 @@ __OSX_AVAILABLE_STARTING(__MAC_NA, __IPHONE_8_0);
 + (NSString *)defaultService;
 + (void)setDefaultService:(NSString *)defaultService;
 
-+ (UICKeyChainStore *)keyChainStore;
-+ (UICKeyChainStore *)keyChainStoreWithService:(nullable NSString *)service;
-+ (UICKeyChainStore *)keyChainStoreWithService:(nullable NSString *)service accessGroup:(nullable NSString *)accessGroup;
++ (CNKI_Z_UICKeyChainStore *)keyChainStore;
++ (CNKI_Z_UICKeyChainStore *)keyChainStoreWithService:(nullable NSString *)service;
++ (CNKI_Z_UICKeyChainStore *)keyChainStoreWithService:(nullable NSString *)service accessGroup:(nullable NSString *)accessGroup;
 
-+ (UICKeyChainStore *)keyChainStoreWithServer:(NSURL *)server protocolType:(UICKeyChainStoreProtocolType)protocolType;
-+ (UICKeyChainStore *)keyChainStoreWithServer:(NSURL *)server protocolType:(UICKeyChainStoreProtocolType)protocolType authenticationType:(UICKeyChainStoreAuthenticationType)authenticationType;
++ (CNKI_Z_UICKeyChainStore *)keyChainStoreWithServer:(NSURL *)server protocolType:(UICKeyChainStoreProtocolType)protocolType;
++ (CNKI_Z_UICKeyChainStore *)keyChainStoreWithServer:(NSURL *)server protocolType:(UICKeyChainStoreProtocolType)protocolType authenticationType:(UICKeyChainStoreAuthenticationType)authenticationType;
 
 - (instancetype)init;
 - (instancetype)initWithService:(nullable NSString *)service;
@@ -209,7 +205,7 @@ __OSX_AVAILABLE_STARTING(__MAC_10_10, __IPHONE_8_0);
 
 @end
 
-@interface UICKeyChainStore (ErrorHandling)
+@interface CNKI_Z_UICKeyChainStore (ErrorHandling)
 
 + (nullable NSString *)stringForKey:(NSString *)key error:(NSError * __nullable __autoreleasing * __nullable)error;
 + (nullable NSString *)stringForKey:(NSString *)key service:(nullable NSString *)service error:(NSError * __nullable __autoreleasing * __nullable)error;
@@ -249,7 +245,7 @@ __OSX_AVAILABLE_STARTING(__MAC_10_10, __IPHONE_8_0);
 
 @end
 
-@interface UICKeyChainStore (ForwardCompatibility)
+@interface CNKI_Z_UICKeyChainStore (ForwardCompatibility)
 
 + (BOOL)setString:(nullable NSString *)value forKey:(NSString *)key genericAttribute:(nullable id)genericAttribute;
 + (BOOL)setString:(nullable NSString *)value forKey:(NSString *)key genericAttribute:(nullable id)genericAttribute error:(NSError * __nullable __autoreleasing * __nullable)error;
@@ -277,7 +273,7 @@ __OSX_AVAILABLE_STARTING(__MAC_10_10, __IPHONE_8_0);
 
 @end
 
-@interface UICKeyChainStore (Deprecation)
+@interface CNKI_Z_UICKeyChainStore (Deprecation)
 
 - (void)synchronize __attribute__((deprecated("calling this method is no longer required")));
 - (BOOL)synchronizeWithError:(NSError * __nullable __autoreleasing * __nullable)error __attribute__((deprecated("calling this method is no longer required")));

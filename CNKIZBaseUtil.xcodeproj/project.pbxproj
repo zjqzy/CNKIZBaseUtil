@@ -47,7 +47,7 @@
 		6630F6772142491F00773B2E /* CNKI_Z_File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F63D2142491F00773B2E /* CNKI_Z_File.m */; };
 		6630F68021424A6C00773B2E /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F67E21424A6B00773B2E /* GTMBase64.m */; };
 		6630F68321424AF500773B2E /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6630F68221424AF500773B2E /* libxml2.tbd */; };
-		6630F68921424BA000773B2E /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F68521424BA000773B2E /* UICKeyChainStore.m */; };
+		6630F68921424BA000773B2E /* CNKI_Z_UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F68521424BA000773B2E /* CNKI_Z_UICKeyChainStore.m */; };
 		6630F68B2142576E00773B2E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6630F68A2142576E00773B2E /* libstdc++.tbd */; };
 		6630F68D2142577500773B2E /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6630F68C2142577500773B2E /* libiconv.tbd */; };
 /* End PBXBuildFile section */
@@ -150,8 +150,8 @@
 		6630F67E21424A6B00773B2E /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
 		6630F67F21424A6C00773B2E /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
 		6630F68221424AF500773B2E /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		6630F68521424BA000773B2E /* UICKeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICKeyChainStore.m; sourceTree = "<group>"; };
-		6630F68621424BA000773B2E /* UICKeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICKeyChainStore.h; sourceTree = "<group>"; };
+		6630F68521424BA000773B2E /* CNKI_Z_UICKeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNKI_Z_UICKeyChainStore.m; sourceTree = "<group>"; };
+		6630F68621424BA000773B2E /* CNKI_Z_UICKeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKI_Z_UICKeyChainStore.h; sourceTree = "<group>"; };
 		6630F68A2142576E00773B2E /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		6630F68C2142577500773B2E /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -322,8 +322,8 @@
 				6630F60B2142491F00773B2E /* CNKI_Z_Queue.m */,
 				6630F63B2142491F00773B2E /* CNKI_Z_Device.h */,
 				6630F6092142491F00773B2E /* CNKI_Z_Device.m */,
-				6630F68621424BA000773B2E /* UICKeyChainStore.h */,
-				6630F68521424BA000773B2E /* UICKeyChainStore.m */,
+				6630F68621424BA000773B2E /* CNKI_Z_UICKeyChainStore.h */,
+				6630F68521424BA000773B2E /* CNKI_Z_UICKeyChainStore.m */,
 			);
 			path = CNKIZ_Common;
 			sourceTree = "<group>";
@@ -502,7 +502,7 @@
 				6630F68021424A6C00773B2E /* GTMBase64.m in Sources */,
 				6630F6532142491F00773B2E /* UIImage+RTTint.m in Sources */,
 				6630F65B2142491F00773B2E /* UIImageView+UIImageView_FaceAwareFill.m in Sources */,
-				6630F68921424BA000773B2E /* UICKeyChainStore.m in Sources */,
+				6630F68921424BA000773B2E /* CNKI_Z_UICKeyChainStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

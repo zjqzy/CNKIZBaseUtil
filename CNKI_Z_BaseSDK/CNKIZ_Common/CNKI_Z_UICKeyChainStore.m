@@ -1,21 +1,18 @@
 //
-//  UICKeyChainStore.m
-//  UICKeyChainStore
-//
-//  Created by Kishikawa Katsumi on 11/11/20.
-//  Copyright (c) 2011 Kishikawa Katsumi. All rights reserved.
+//  CNKI_Z_UICKeyChainStore.m
 //
 
-#import "UICKeyChainStore.h"
 
-NSString * const UICKeyChainStoreErrorDomain = @"com.kishikawakatsumi.uickeychainstore";
+#import "CNKI_Z_UICKeyChainStore.h"
+
+NSString * const UICKeyChainStoreErrorDomain = @"com.TTKN.uickeychainstore";
 static NSString *_defaultService;
 
-@interface UICKeyChainStore ()
+@interface CNKI_Z_UICKeyChainStore ()
 
 @end
 
-@implementation UICKeyChainStore
+@implementation CNKI_Z_UICKeyChainStore
 
 + (NSString *)defaultService
 {
@@ -33,29 +30,29 @@ static NSString *_defaultService;
 
 #pragma mark -
 
-+ (UICKeyChainStore *)keyChainStore
++ (CNKI_Z_UICKeyChainStore *)keyChainStore
 {
     return [[self alloc] initWithService:nil accessGroup:nil];
 }
 
-+ (UICKeyChainStore *)keyChainStoreWithService:(NSString *)service
++ (CNKI_Z_UICKeyChainStore *)keyChainStoreWithService:(NSString *)service
 {
     return [[self alloc] initWithService:service accessGroup:nil];
 }
 
-+ (UICKeyChainStore *)keyChainStoreWithService:(NSString *)service accessGroup:(NSString *)accessGroup
++ (CNKI_Z_UICKeyChainStore *)keyChainStoreWithService:(NSString *)service accessGroup:(NSString *)accessGroup
 {
     return [[self alloc] initWithService:service accessGroup:accessGroup];
 }
 
 #pragma mark -
 
-+ (UICKeyChainStore *)keyChainStoreWithServer:(NSURL *)server protocolType:(UICKeyChainStoreProtocolType)protocolType
++ (CNKI_Z_UICKeyChainStore *)keyChainStoreWithServer:(NSURL *)server protocolType:(UICKeyChainStoreProtocolType)protocolType
 {
     return [[self alloc] initWithServer:server protocolType:protocolType authenticationType:UICKeyChainStoreAuthenticationTypeDefault];
 }
 
-+ (UICKeyChainStore *)keyChainStoreWithServer:(NSURL *)server protocolType:(UICKeyChainStoreProtocolType)protocolType authenticationType:(UICKeyChainStoreAuthenticationType)authenticationType
++ (CNKI_Z_UICKeyChainStore *)keyChainStoreWithServer:(NSURL *)server protocolType:(UICKeyChainStoreProtocolType)protocolType authenticationType:(UICKeyChainStoreAuthenticationType)authenticationType
 {
     return [[self alloc] initWithServer:server protocolType:protocolType authenticationType:authenticationType];
 }
@@ -159,7 +156,7 @@ static NSString *_defaultService;
         service = [self defaultService];
     }
     
-    UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithService:service accessGroup:accessGroup];
+    CNKI_Z_UICKeyChainStore *keychain = [CNKI_Z_UICKeyChainStore keyChainStoreWithService:service accessGroup:accessGroup];
     return [keychain stringForKey:key error:error];
 }
 
@@ -276,7 +273,7 @@ static NSString *_defaultService;
         service = [self defaultService];
     }
     
-    UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithService:service accessGroup:accessGroup];
+    CNKI_Z_UICKeyChainStore *keychain = [CNKI_Z_UICKeyChainStore keyChainStoreWithService:service accessGroup:accessGroup];
     return [keychain dataForKey:key error:error];
 }
 
@@ -350,7 +347,7 @@ static NSString *_defaultService;
         service = [self defaultService];
     }
     
-    UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithService:service accessGroup:accessGroup];
+    CNKI_Z_UICKeyChainStore *keychain = [CNKI_Z_UICKeyChainStore keyChainStoreWithService:service accessGroup:accessGroup];
     return [keychain setData:data forKey:key genericAttribute:genericAttribute];
 }
 
@@ -660,7 +657,7 @@ static NSString *_defaultService;
         service = [self defaultService];
     }
     
-    UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithService:service accessGroup:accessGroup];
+    CNKI_Z_UICKeyChainStore *keychain = [CNKI_Z_UICKeyChainStore keyChainStoreWithService:service accessGroup:accessGroup];
     return [keychain removeItemForKey:key error:error];
 }
 
@@ -693,7 +690,7 @@ static NSString *_defaultService;
 
 + (BOOL)removeAllItemsForService:(NSString *)service accessGroup:(NSString *)accessGroup error:(NSError *__autoreleasing *)error
 {
-    UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithService:service accessGroup:accessGroup];
+    CNKI_Z_UICKeyChainStore *keychain = [CNKI_Z_UICKeyChainStore keyChainStoreWithService:service accessGroup:accessGroup];
     return [keychain removeAllItemsWithError:error];
 }
 
@@ -1376,7 +1373,7 @@ static NSString *_defaultService;
 
 @end
 
-@implementation UICKeyChainStore (Deprecation)
+@implementation CNKI_Z_UICKeyChainStore (Deprecation)
 
 - (void)synchronize
 {
