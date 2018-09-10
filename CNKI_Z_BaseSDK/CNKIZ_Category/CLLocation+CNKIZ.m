@@ -6,7 +6,7 @@
 //
 //
 
-#import "CLLocation+ZJQLocation.h"
+#import "CLLocation+CNKIZ.h"
 
 void transform_earth_from_mars(double lat, double lng, double* tarLat, double* tarLng);
 void transform_mars_from_baidu(double lat, double lng, double* tarLat, double* tarLng);

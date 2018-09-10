@@ -33,7 +33,7 @@
 
 #import <CoreLocation/CoreLocation.h>
 
-@interface CLLocation (YCLocation)
+@interface CLLocation (CNKIZ)
 
 //从地图坐标转化到火星坐标
 - (CLLocation*)locationMarsFromEarth;

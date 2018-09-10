@@ -36,7 +36,7 @@
 		6630F6542142491F00773B2E /* NSData+GZIP.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F5F42142491F00773B2E /* NSData+GZIP.m */; };
 		6630F6552142491F00773B2E /* UIScrollView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F5F62142491F00773B2E /* UIScrollView+Screenshot.m */; };
 		6630F6562142491F00773B2E /* NSHTTPCookieStorage+FreezeDry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F5F82142491F00773B2E /* NSHTTPCookieStorage+FreezeDry.m */; };
-		6630F6582142491F00773B2E /* CLLocation+ZJQLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F5FA2142491F00773B2E /* CLLocation+ZJQLocation.m */; };
+		6630F6582142491F00773B2E /* CLLocation+CNKIZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F5FA2142491F00773B2E /* CLLocation+CNKIZ.m */; };
 		6630F6592142491F00773B2E /* NSString+zExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F5FB2142491F00773B2E /* NSString+zExtensions.m */; };
 		6630F65A2142491F00773B2E /* UITableView+EmptyDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F6002142491F00773B2E /* UITableView+EmptyDataView.m */; };
 		6630F65B2142491F00773B2E /* UIImageView+UIImageView_FaceAwareFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F6012142491F00773B2E /* UIImageView+UIImageView_FaceAwareFill.m */; };
@@ -99,7 +99,7 @@
 		6630F5DB2142491F00773B2E /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		6630F5DC2142491F00773B2E /* UIView+Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layer.m"; sourceTree = "<group>"; };
 		6630F5DD2142491F00773B2E /* NSString+zExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+zExtensions.h"; sourceTree = "<group>"; };
-		6630F5DE2142491F00773B2E /* CLLocation+ZJQLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+ZJQLocation.h"; sourceTree = "<group>"; };
+		6630F5DE2142491F00773B2E /* CLLocation+CNKIZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+CNKIZ.h"; sourceTree = "<group>"; };
 		6630F5E02142491F00773B2E /* NSHTTPCookieStorage+FreezeDry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSHTTPCookieStorage+FreezeDry.h"; sourceTree = "<group>"; };
 		6630F5E12142491F00773B2E /* UIView+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Badge.m"; sourceTree = "<group>"; };
 		6630F5E22142491F00773B2E /* UIScrollView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Screenshot.h"; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		6630F5F62142491F00773B2E /* UIScrollView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Screenshot.m"; sourceTree = "<group>"; };
 		6630F5F72142491F00773B2E /* UIView+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Badge.h"; sourceTree = "<group>"; };
 		6630F5F82142491F00773B2E /* NSHTTPCookieStorage+FreezeDry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPCookieStorage+FreezeDry.m"; sourceTree = "<group>"; };
-		6630F5FA2142491F00773B2E /* CLLocation+ZJQLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+ZJQLocation.m"; sourceTree = "<group>"; };
+		6630F5FA2142491F00773B2E /* CLLocation+CNKIZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+CNKIZ.m"; sourceTree = "<group>"; };
 		6630F5FB2142491F00773B2E /* NSString+zExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+zExtensions.m"; sourceTree = "<group>"; };
 		6630F5FC2142491F00773B2E /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		6630F5FD2142491F00773B2E /* UIView+Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layer.h"; sourceTree = "<group>"; };
@@ -255,8 +255,8 @@
 				6630F67F21424A6C00773B2E /* GTMBase64.h */,
 				6630F67E21424A6B00773B2E /* GTMBase64.m */,
 				6630F67D21424A6B00773B2E /* GTMDefines.h */,
-				6630F5DE2142491F00773B2E /* CLLocation+ZJQLocation.h */,
-				6630F5FA2142491F00773B2E /* CLLocation+ZJQLocation.m */,
+				6630F5DE2142491F00773B2E /* CLLocation+CNKIZ.h */,
+				6630F5FA2142491F00773B2E /* CLLocation+CNKIZ.m */,
 				6630F5D62142491F00773B2E /* NSData+GZIP.h */,
 				6630F5F42142491F00773B2E /* NSData+GZIP.m */,
 				6630F6032142491F00773B2E /* NSDate+Addition.h */,
@@ -498,7 +498,7 @@
 				6630F6492142491F00773B2E /* UIView+Layer.m in Sources */,
 				6630F6482142491F00773B2E /* UIView+Frame.m in Sources */,
 				6630F59D2142484400773B2E /* AppDelegate.m in Sources */,
-				6630F6582142491F00773B2E /* CLLocation+ZJQLocation.m in Sources */,
+				6630F6582142491F00773B2E /* CLLocation+CNKIZ.m in Sources */,
 				6630F68021424A6C00773B2E /* GTMBase64.m in Sources */,
 				6630F6532142491F00773B2E /* UIImage+RTTint.m in Sources */,
 				6630F65B2142491F00773B2E /* UIImageView+UIImageView_FaceAwareFill.m in Sources */,
