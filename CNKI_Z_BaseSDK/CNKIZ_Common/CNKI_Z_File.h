@@ -1,6 +1,9 @@
 //
-//  CFileUtil.h
+//  CNKI_Z_File.h
 //
+//  Created by zhu jianqi on 2018/9/20.
+//  Copyright © 2018年 zhu jianqi. All rights reserved.
+//  Email : zhu.jian.qi@163.com
 
 /*
  
@@ -12,7 +15,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CFileUtil : NSObject
+@interface CNKI_Z_File : NSObject
 
 //////////////////////////////////////////////
 //////////////////////////////////////////////
@@ -22,7 +25,7 @@
  
  @return 返回 self
  */
-+(CFileUtil*)sharedInstance;
++(CNKI_Z_File*)sharedInstance;
 
 // 单例限制
 // 告诉外面，alloc，new，copy，mutableCopy方法不可以直接调用。

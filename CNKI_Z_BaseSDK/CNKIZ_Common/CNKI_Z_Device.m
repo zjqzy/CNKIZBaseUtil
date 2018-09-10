@@ -1,10 +1,8 @@
 //
-//  DeviceObject.m
-//  CAJViewer
+//  CNKI_Z_Device.m
+
 //
-//  Created by zhu on 13-5-20.
-//  Copyright (c) 2013年 zhu. All rights reserved.
-//
+
 #import <UIKit/UIKit.h>
 
 #import <sys/sysctl.h>
@@ -14,15 +12,15 @@
 #include <ifaddrs.h>    //ip
 #include <arpa/inet.h>  //ip
 
-#import "DeviceObject.h"
+#import "CNKI_Z_Device.h"
 //#import "UIDevice+IdentifierAddition.h"
 //#import "OpenUDID.h"
 #import "UICKeyChainStore.h"
 //#import "CLocation.h"
 
-@implementation DeviceObject
-static DeviceObject *s_device = nil;
-+(DeviceObject*)sharedInstance
+@implementation CNKI_Z_Device
+static CNKI_Z_Device *s_device = nil;
++(CNKI_Z_Device*)sharedInstance
 {
     //单例
     static dispatch_once_t onceToken;
@@ -33,15 +31,15 @@ static DeviceObject *s_device = nil;
 }
 +(id)allocWithZone:(struct _NSZone *)zone
 {
-    return [DeviceObject sharedInstance] ;
+    return [CNKI_Z_Device sharedInstance] ;
 }
 
 -(id)copyWithZone:(struct _NSZone *)zone
 {
-    return [DeviceObject sharedInstance] ;
+    return [CNKI_Z_Device sharedInstance] ;
 }
 -(id)mutableCopyWithZone:(NSZone *)zone{
-    return [DeviceObject sharedInstance];
+    return [CNKI_Z_Device sharedInstance];
 }
 -(void)dealloc
 {
@@ -60,7 +58,7 @@ static DeviceObject *s_device = nil;
 {
     //描述
     
-    NSString *strDesc=[NSString stringWithFormat:@"class=%@\nDeviceObject\ndevicename=%@\nsystemname=%@\nsystemversion=%0.2f\nDeviceModel=%@\nscreenScale=%0.2f\ndeviceDPI=%0.2f\ndeviceTotalMemory=%0.2fMB\nDeviceVersion=%@\n%@设备  uniqueDeviceId=%@\n国家=%@",[NSString stringWithUTF8String:object_getClassName(self)],self.uniqueDeviceName,self.systemname,_systemversion ,self.DeviceModel,_screenScale,_deviceDpi,_deviceTotalMemory,_DeviceVersion,[self is64Bit]?@"64位":@"32位",self.uniqueDeviceId,[self getCountryCode]];
+    NSString *strDesc=[NSString stringWithFormat:@"class=%@\ndevicename=%@\nsystemname=%@\nsystemversion=%0.2f\nDeviceModel=%@\nscreenScale=%0.2f\ndeviceDPI=%0.2f\ndeviceTotalMemory=%0.2fMB\nDeviceVersion=%@\n%@设备  uniqueDeviceId=%@\n国家=%@",[NSString stringWithUTF8String:object_getClassName(self)],self.uniqueDeviceName,self.systemname,_systemversion ,self.DeviceModel,_screenScale,_deviceDpi,_deviceTotalMemory,_DeviceVersion,[self is64Bit]?@"64位":@"32位",self.uniqueDeviceId,[self getCountryCode]];
 
     return strDesc;
 }

@@ -1,7 +1,7 @@
 //
 //  NSUncaughtExceptionUtil.h
 //
-//  Created by zhu jianqi on 2018/6/20.
+//  Created by zhu jianqi on 2018/9/20.
 //  Copyright © 2018年 zhu jianqi. All rights reserved.
 //  Email : zhu.jian.qi@163.com
 
@@ -11,7 +11,7 @@
  
  
  在启动函数 application:didFinishLaunchingWithOptions: 里 加入
- [[CExceptionUtil sharedInstance] triggerWithHandler:nil];
+ [[CNKI_Z_Exception sharedInstance] triggerWithHandler:nil];
 
  
  crash文件路径
@@ -21,14 +21,14 @@
  */
 #import <Foundation/Foundation.h>
 
-@interface CExceptionUtil : NSObject
+@interface CNKI_Z_Exception : NSObject
 
 /**
  单例
 
  @return 返回 self
  */
-+(CExceptionUtil*)sharedInstance;
++(CNKI_Z_Exception*)sharedInstance;
 
 
 /**

@@ -1,21 +1,19 @@
 //
 //  DeviceObject.h
-//  CAJViewer
 //
-//  Created by zhu on 13-5-20.
-//  Copyright (c) 2013年 zhu. All rights reserved.
-//
+//  Created by zhu jianqi on 2018/9/20.
+//  Copyright © 2018年 zhu jianqi. All rights reserved.
+//  Email : zhu.jian.qi@163.com
 
 /*
- 记录设备信息 , 应用的一些信息
  
- 支持 mrc 或 arc 编译
+ 设备&应用 信息
  
  */
 #import <Foundation/Foundation.h>
 
 
-@interface DeviceObject : NSObject
+@interface CNKI_Z_Device : NSObject
 
 //////////////////////////////////////////////
 //////////////////////////////////////////////
@@ -25,7 +23,7 @@
 
 @return 返回 self
 */
-+(DeviceObject*)sharedInstance;
++(CNKI_Z_Device*)sharedInstance;
 
 // 单例限制
 // 告诉外面，alloc，new，copy，mutableCopy方法不可以直接调用。

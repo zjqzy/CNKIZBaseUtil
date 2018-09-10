@@ -40,14 +40,16 @@
 		6630F6592142491F00773B2E /* NSString+zExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F5FB2142491F00773B2E /* NSString+zExtensions.m */; };
 		6630F65A2142491F00773B2E /* UITableView+EmptyDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F6002142491F00773B2E /* UITableView+EmptyDataView.m */; };
 		6630F65B2142491F00773B2E /* UIImageView+UIImageView_FaceAwareFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F6012142491F00773B2E /* UIImageView+UIImageView_FaceAwareFill.m */; };
-		6630F65D2142491F00773B2E /* DeviceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F6092142491F00773B2E /* DeviceObject.m */; };
+		6630F65D2142491F00773B2E /* CNKI_Z_Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F6092142491F00773B2E /* CNKI_Z_Device.m */; };
 		6630F65E2142491F00773B2E /* CNKI_Z_Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F60B2142491F00773B2E /* CNKI_Z_Queue.m */; };
-		6630F6602142491F00773B2E /* CExceptionUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F60E2142491F00773B2E /* CExceptionUtil.m */; };
+		6630F6602142491F00773B2E /* CNKI_Z_Exception.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F60E2142491F00773B2E /* CNKI_Z_Exception.m */; };
 		6630F6732142491F00773B2E /* CNKI_Z_GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F6362142491F00773B2E /* CNKI_Z_GDataXMLNode.m */; };
-		6630F6772142491F00773B2E /* CFileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F63D2142491F00773B2E /* CFileUtil.m */; };
+		6630F6772142491F00773B2E /* CNKI_Z_File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F63D2142491F00773B2E /* CNKI_Z_File.m */; };
 		6630F68021424A6C00773B2E /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F67E21424A6B00773B2E /* GTMBase64.m */; };
 		6630F68321424AF500773B2E /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6630F68221424AF500773B2E /* libxml2.tbd */; };
 		6630F68921424BA000773B2E /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F68521424BA000773B2E /* UICKeyChainStore.m */; };
+		6630F68B2142576E00773B2E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6630F68A2142576E00773B2E /* libstdc++.tbd */; };
+		6630F68D2142577500773B2E /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6630F68C2142577500773B2E /* libiconv.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,22 +136,24 @@
 		6630F6032142491F00773B2E /* NSDate+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Addition.h"; sourceTree = "<group>"; };
 		6630F6042142491F00773B2E /* UIColor+zExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+zExtensions.h"; sourceTree = "<group>"; };
 		6630F6052142491F00773B2E /* NSInvocation+SimpleCreation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+SimpleCreation.h"; sourceTree = "<group>"; };
-		6630F6092142491F00773B2E /* DeviceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceObject.m; sourceTree = "<group>"; };
+		6630F6092142491F00773B2E /* CNKI_Z_Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNKI_Z_Device.m; sourceTree = "<group>"; };
 		6630F60B2142491F00773B2E /* CNKI_Z_Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNKI_Z_Queue.m; sourceTree = "<group>"; };
 		6630F60C2142491F00773B2E /* CNKI_Z_GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKI_Z_GDataXMLNode.h; sourceTree = "<group>"; };
-		6630F60E2142491F00773B2E /* CExceptionUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CExceptionUtil.m; sourceTree = "<group>"; };
-		6630F6102142491F00773B2E /* CFileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFileUtil.h; sourceTree = "<group>"; };
+		6630F60E2142491F00773B2E /* CNKI_Z_Exception.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNKI_Z_Exception.m; sourceTree = "<group>"; };
+		6630F6102142491F00773B2E /* CNKI_Z_File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKI_Z_File.h; sourceTree = "<group>"; };
 		6630F6362142491F00773B2E /* CNKI_Z_GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNKI_Z_GDataXMLNode.m; sourceTree = "<group>"; };
 		6630F6372142491F00773B2E /* CNKI_Z_Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKI_Z_Queue.h; sourceTree = "<group>"; };
-		6630F63B2142491F00773B2E /* DeviceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceObject.h; sourceTree = "<group>"; };
-		6630F63D2142491F00773B2E /* CFileUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFileUtil.m; sourceTree = "<group>"; };
-		6630F63F2142491F00773B2E /* CExceptionUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CExceptionUtil.h; sourceTree = "<group>"; };
+		6630F63B2142491F00773B2E /* CNKI_Z_Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKI_Z_Device.h; sourceTree = "<group>"; };
+		6630F63D2142491F00773B2E /* CNKI_Z_File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNKI_Z_File.m; sourceTree = "<group>"; };
+		6630F63F2142491F00773B2E /* CNKI_Z_Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKI_Z_Exception.h; sourceTree = "<group>"; };
 		6630F67D21424A6B00773B2E /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		6630F67E21424A6B00773B2E /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
 		6630F67F21424A6C00773B2E /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
 		6630F68221424AF500773B2E /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		6630F68521424BA000773B2E /* UICKeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICKeyChainStore.m; sourceTree = "<group>"; };
 		6630F68621424BA000773B2E /* UICKeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICKeyChainStore.h; sourceTree = "<group>"; };
+		6630F68A2142576E00773B2E /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		6630F68C2142577500773B2E /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6630F68D2142577500773B2E /* libiconv.tbd in Frameworks */,
+				6630F68B2142576E00773B2E /* libstdc++.tbd in Frameworks */,
 				6630F68321424AF500773B2E /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,16 +312,16 @@
 		6630F6062142491F00773B2E /* CNKIZ_Common */ = {
 			isa = PBXGroup;
 			children = (
-				6630F63F2142491F00773B2E /* CExceptionUtil.h */,
-				6630F60E2142491F00773B2E /* CExceptionUtil.m */,
-				6630F6102142491F00773B2E /* CFileUtil.h */,
-				6630F63D2142491F00773B2E /* CFileUtil.m */,
+				6630F63F2142491F00773B2E /* CNKI_Z_Exception.h */,
+				6630F60E2142491F00773B2E /* CNKI_Z_Exception.m */,
+				6630F6102142491F00773B2E /* CNKI_Z_File.h */,
+				6630F63D2142491F00773B2E /* CNKI_Z_File.m */,
 				6630F60C2142491F00773B2E /* CNKI_Z_GDataXMLNode.h */,
 				6630F6362142491F00773B2E /* CNKI_Z_GDataXMLNode.m */,
 				6630F6372142491F00773B2E /* CNKI_Z_Queue.h */,
 				6630F60B2142491F00773B2E /* CNKI_Z_Queue.m */,
-				6630F63B2142491F00773B2E /* DeviceObject.h */,
-				6630F6092142491F00773B2E /* DeviceObject.m */,
+				6630F63B2142491F00773B2E /* CNKI_Z_Device.h */,
+				6630F6092142491F00773B2E /* CNKI_Z_Device.m */,
 				6630F68621424BA000773B2E /* UICKeyChainStore.h */,
 				6630F68521424BA000773B2E /* UICKeyChainStore.m */,
 			);
@@ -325,6 +331,8 @@
 		6630F68121424AD200773B2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6630F68C2142577500773B2E /* libiconv.tbd */,
+				6630F68A2142576E00773B2E /* libstdc++.tbd */,
 				6630F68221424AF500773B2E /* libxml2.tbd */,
 			);
 			path = Frameworks;
@@ -473,7 +481,7 @@
 				6630F65E2142491F00773B2E /* CNKI_Z_Queue.m in Sources */,
 				6630F6422142491F00773B2E /* UIView+Animations.m in Sources */,
 				6630F64C2142491F00773B2E /* UIColor+zExtensions.m in Sources */,
-				6630F6772142491F00773B2E /* CFileUtil.m in Sources */,
+				6630F6772142491F00773B2E /* CNKI_Z_File.m in Sources */,
 				6630F64A2142491F00773B2E /* UIView+Badge.m in Sources */,
 				6630F6432142491F00773B2E /* NSFileManager+Addition.m in Sources */,
 				6630F6452142491F00773B2E /* UIView+Border.m in Sources */,
@@ -485,8 +493,8 @@
 				6630F64B2142491F00773B2E /* NSInvocation+SimpleCreation.m in Sources */,
 				6630F6522142491F00773B2E /* NSString+PDRegex.m in Sources */,
 				6630F6462142491F00773B2E /* UIApplication+NetworkActivity.m in Sources */,
-				6630F65D2142491F00773B2E /* DeviceObject.m in Sources */,
-				6630F6602142491F00773B2E /* CExceptionUtil.m in Sources */,
+				6630F65D2142491F00773B2E /* CNKI_Z_Device.m in Sources */,
+				6630F6602142491F00773B2E /* CNKI_Z_Exception.m in Sources */,
 				6630F6492142491F00773B2E /* UIView+Layer.m in Sources */,
 				6630F6482142491F00773B2E /* UIView+Frame.m in Sources */,
 				6630F59D2142484400773B2E /* AppDelegate.m in Sources */,

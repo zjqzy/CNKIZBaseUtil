@@ -1,6 +1,10 @@
 //
 //  CNKI_Z_Queue.h
 //
+//  Created by zhu jianqi on 2018/9/20.
+//  Copyright © 2018年 zhu jianqi. All rights reserved.
+//  Email : zhu.jian.qi@163.com
+
 /*
  
  线程池对象

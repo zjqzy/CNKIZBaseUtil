@@ -3,37 +3,37 @@
 //
 
 
-#import "CExceptionUtil.h"
+#import "CNKI_Z_Exception.h"
 
-@interface CExceptionUtil()
+@interface CNKI_Z_Exception()
 
 
 @end
 
-@implementation CExceptionUtil
+@implementation CNKI_Z_Exception
 
-static CExceptionUtil *s_uncaughtException = nil;
-+(CExceptionUtil*)sharedInstance
+static CNKI_Z_Exception *s_uncaughtException = nil;
++(CNKI_Z_Exception*)sharedInstance
 {
     //单例
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         s_uncaughtException = [[super allocWithZone:nil] init];
-        //s_uncaughtException = [[CExceptionUtil alloc] init];
+        
     });
     return s_uncaughtException;
 }
 +(id)allocWithZone:(struct _NSZone *)zone
 {
-    return [CExceptionUtil sharedInstance] ;
+    return [CNKI_Z_Exception sharedInstance] ;
 }
 
 -(id)copyWithZone:(struct _NSZone *)zone
 {
-    return [CExceptionUtil sharedInstance] ;
+    return [CNKI_Z_Exception sharedInstance] ;
 }
 -(id)mutableCopyWithZone:(NSZone *)zone{
-    return [CExceptionUtil sharedInstance];
+    return [CNKI_Z_Exception sharedInstance];
 }
 -(void)dealloc
 {

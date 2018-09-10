@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CNKI_Z_BaseSDK"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "CNKI 基础库 iOS"
 
 
@@ -18,13 +18,26 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/zjqzy/CNKIZBaseUtil.git", :tag => "#{s.version}" }
 
+  # s.source_files     = 'CNKI_Z_BaseSDK/**/*'
 
-  s.subspec 'CNKI_Z_BaseSDK' do |ss|
-     ss.source_files = 'CNKIZBaseUtil/CNKI_Z_BaseSDK/**/*'
+  s.subspec 'CNKI_Z_BaseSDK' do |base|
+
+    # base.source_files = 'CNKI_Z_BaseSDK/cnkiz.h'
+
+    base.subspec 'CNKIZ_Category' do |category|
+      category.source_files = 'CNKI_Z_BaseSDK/CNKIZ_Category/**/*'
+    end
+
+    base.subspec 'CNKIZ_Common' do |common|
+      common.source_files = 'CNKI_Z_BaseSDK/CNKIZ_Common/**/*'
+    end
+
   end
 
 
-  s.libraries = "iconv", "xml2"
+  s.frameworks = "UIKit", "Foundation"
+
+  s.libraries = "iconv", "xml2" ,"stdc++"
   s.requires_arc = true
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 

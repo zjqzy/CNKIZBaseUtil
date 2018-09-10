@@ -1,5 +1,5 @@
 //
-//  CFileUtil.m
+//  CNKI_Z_File.m
 //
 
 #import <sys/stat.h>                    //大小
@@ -8,11 +8,11 @@
 #import <CommonCrypto/CommonCryptor.h>  // DES加密
 #import <zlib.h>                        // crc
 
-#import "CFileUtil.h"
+#import "CNKI_Z_File.h"
 
-@implementation CFileUtil
-static CFileUtil *s_file = nil;
-+(CFileUtil*)sharedInstance
+@implementation CNKI_Z_File
+static CNKI_Z_File *s_file = nil;
++(CNKI_Z_File*)sharedInstance
 {
     //单例
     static dispatch_once_t onceToken;
@@ -23,15 +23,15 @@ static CFileUtil *s_file = nil;
 }
 +(id)allocWithZone:(struct _NSZone *)zone
 {
-    return [CFileUtil sharedInstance] ;
+    return [CNKI_Z_File sharedInstance] ;
 }
 
 -(id)copyWithZone:(struct _NSZone *)zone
 {
-    return [CFileUtil sharedInstance] ;
+    return [CNKI_Z_File sharedInstance] ;
 }
 -(id)mutableCopyWithZone:(NSZone *)zone{
-    return [CFileUtil sharedInstance];
+    return [CNKI_Z_File sharedInstance];
 }
 -(void)dealloc
 {
