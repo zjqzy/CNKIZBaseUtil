@@ -31,7 +31,7 @@
 		6630F6602142491F00773B2E /* CNKI_Z_Exception.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F60E2142491F00773B2E /* CNKI_Z_Exception.m */; };
 		6630F6732142491F00773B2E /* CNKI_Z_GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F6362142491F00773B2E /* CNKI_Z_GDataXMLNode.m */; };
 		6630F6772142491F00773B2E /* CNKI_Z_File.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F63D2142491F00773B2E /* CNKI_Z_File.m */; };
-		6630F68021424A6C00773B2E /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F67E21424A6B00773B2E /* GTMBase64.m */; };
+		6630F68021424A6C00773B2E /* CNKIZ_GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F67E21424A6B00773B2E /* CNKIZ_GTMBase64.m */; };
 		6630F68321424AF500773B2E /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6630F68221424AF500773B2E /* libxml2.tbd */; };
 		6630F68921424BA000773B2E /* CNKI_Z_UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F68521424BA000773B2E /* CNKI_Z_UICKeyChainStore.m */; };
 		6630F68B2142576E00773B2E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6630F68A2142576E00773B2E /* libstdc++.tbd */; };
@@ -104,9 +104,9 @@
 		6630F63B2142491F00773B2E /* CNKI_Z_Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKI_Z_Device.h; sourceTree = "<group>"; };
 		6630F63D2142491F00773B2E /* CNKI_Z_File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNKI_Z_File.m; sourceTree = "<group>"; };
 		6630F63F2142491F00773B2E /* CNKI_Z_Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKI_Z_Exception.h; sourceTree = "<group>"; };
-		6630F67D21424A6B00773B2E /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
-		6630F67E21424A6B00773B2E /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
-		6630F67F21424A6C00773B2E /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		6630F67D21424A6B00773B2E /* CNKIZ_GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKIZ_GTMDefines.h; sourceTree = "<group>"; };
+		6630F67E21424A6B00773B2E /* CNKIZ_GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNKIZ_GTMBase64.m; sourceTree = "<group>"; };
+		6630F67F21424A6C00773B2E /* CNKIZ_GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKIZ_GTMBase64.h; sourceTree = "<group>"; };
 		6630F68221424AF500773B2E /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		6630F68521424BA000773B2E /* CNKI_Z_UICKeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNKI_Z_UICKeyChainStore.m; sourceTree = "<group>"; };
 		6630F68621424BA000773B2E /* CNKI_Z_UICKeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKI_Z_UICKeyChainStore.h; sourceTree = "<group>"; };
@@ -212,29 +212,29 @@
 			children = (
 				6630F5DE2142491F00773B2E /* CLLocation+CNKIZ.h */,
 				6630F5FA2142491F00773B2E /* CLLocation+CNKIZ.m */,
-				6630F5FE2142491F00773B2E /* NSObject+CNKIZ.h */,
-				6630F5EA2142491F00773B2E /* NSObject+CNKIZ.m */,
-				6630F6052142491F00773B2E /* NSInvocation+CNKIZ.h */,
-				6630F5E32142491F00773B2E /* NSInvocation+CNKIZ.m */,
-				6630F5F12142491F00773B2E /* UIWebView+CNKIZ.h */,
-				6630F5D92142491F00773B2E /* UIWebView+CNKIZ.m */,
+				6630F67F21424A6C00773B2E /* CNKIZ_GTMBase64.h */,
+				6630F67E21424A6B00773B2E /* CNKIZ_GTMBase64.m */,
+				6630F67D21424A6B00773B2E /* CNKIZ_GTMDefines.h */,
 				6630F5D62142491F00773B2E /* NSData+CNKIZ.h */,
 				6630F5F42142491F00773B2E /* NSData+CNKIZ.m */,
 				6630F6032142491F00773B2E /* NSDate+CNKIZ.h */,
 				6630F5E52142491F00773B2E /* NSDate+CNKIZ.m */,
-				6630F5E62142491F00773B2E /* UIImageView+CNKIZ.h */,
-				6630F6012142491F00773B2E /* UIImageView+CNKIZ.m */,
-				6630F5EB2142491F00773B2E /* UIColor+CNKIZ.h */,
-				6630F5D52142491F00773B2E /* UIColor+CNKIZ.m */,
-				6630F67F21424A6C00773B2E /* GTMBase64.h */,
-				6630F67E21424A6B00773B2E /* GTMBase64.m */,
-				6630F67D21424A6B00773B2E /* GTMDefines.h */,
+				6630F6052142491F00773B2E /* NSInvocation+CNKIZ.h */,
+				6630F5E32142491F00773B2E /* NSInvocation+CNKIZ.m */,
+				6630F5FE2142491F00773B2E /* NSObject+CNKIZ.h */,
+				6630F5EA2142491F00773B2E /* NSObject+CNKIZ.m */,
 				6630F5DD2142491F00773B2E /* NSString+CNKIZ.h */,
 				6630F5FB2142491F00773B2E /* NSString+CNKIZ.m */,
+				6630F5EB2142491F00773B2E /* UIColor+CNKIZ.h */,
+				6630F5D52142491F00773B2E /* UIColor+CNKIZ.m */,
 				6630F5FF2142491F00773B2E /* UIImage+CNKIZ.h */,
 				6630F5E92142491F00773B2E /* UIImage+CNKIZ.m */,
+				6630F5E62142491F00773B2E /* UIImageView+CNKIZ.h */,
+				6630F6012142491F00773B2E /* UIImageView+CNKIZ.m */,
 				6630F5EE2142491F00773B2E /* UIView+CNKIZ.h */,
 				6630F5D32142491F00773B2E /* UIView+CNKIZ.m */,
+				6630F5F12142491F00773B2E /* UIWebView+CNKIZ.h */,
+				6630F5D92142491F00773B2E /* UIWebView+CNKIZ.m */,
 			);
 			path = CNKIZ_Category;
 			sourceTree = "<group>";
@@ -416,7 +416,7 @@
 				6630F6602142491F00773B2E /* CNKI_Z_Exception.m in Sources */,
 				6630F59D2142484400773B2E /* AppDelegate.m in Sources */,
 				6630F6582142491F00773B2E /* CLLocation+CNKIZ.m in Sources */,
-				6630F68021424A6C00773B2E /* GTMBase64.m in Sources */,
+				6630F68021424A6C00773B2E /* CNKIZ_GTMBase64.m in Sources */,
 				6630F65B2142491F00773B2E /* UIImageView+CNKIZ.m in Sources */,
 				6630F68921424BA000773B2E /* CNKI_Z_UICKeyChainStore.m in Sources */,
 			);

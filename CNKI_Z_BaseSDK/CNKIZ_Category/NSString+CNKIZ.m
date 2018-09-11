@@ -4,7 +4,7 @@
 
 
 #import "NSString+CNKIZ.h"
-#import "GTMBase64.h"
+#import "CNKIZ_GTMBase64.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonCryptor.h>
 
@@ -172,7 +172,7 @@
     CC_SHA1(data.bytes, (CC_LONG)data.length, digest);
     
     NSData * base64 = [[NSData alloc]initWithBytes:digest length:CC_SHA1_DIGEST_LENGTH];
-    base64 = [GTMBase64 encodeData:base64];
+    base64 = [CNKIZ_GTMBase64 encodeData:base64];
     
     NSString * output = [[NSString alloc] initWithData:base64 encoding:NSUTF8StringEncoding];
     return output ;
@@ -185,7 +185,7 @@
     CC_MD5( cStr, (CC_LONG)strlen(cStr), digest );
     
     NSData * base64 = [[NSData alloc]initWithBytes:digest length:CC_MD5_DIGEST_LENGTH];
-    base64 = [GTMBase64 encodeData:base64];
+    base64 = [CNKIZ_GTMBase64 encodeData:base64];
     
     NSString * output = [[NSString alloc] initWithData:base64 encoding:NSUTF8StringEncoding];
     return output;
@@ -195,7 +195,7 @@
 {
     //NSData *data = [self dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
-    data = [GTMBase64 encodeData:data];
+    data = [CNKIZ_GTMBase64 encodeData:data];
     NSString *output = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     return output;
 }
@@ -203,7 +203,7 @@
 - (NSString *)decode_base64 {
     //NSData *data = [self dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
-    data = [GTMBase64 decodeData:data];
+    data = [CNKIZ_GTMBase64 decodeData:data];
     NSString *output = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     return output;
 }
@@ -234,14 +234,14 @@
     if (cryptStatus == kCCSuccess) {
         NSData *data = [NSData dataWithBytes:buffer length:(NSUInteger)numBytesEncrypted];
         
-        ciphertext = [[NSString alloc] initWithData:[GTMBase64 encodeData:data] encoding:NSUTF8StringEncoding];
+        ciphertext = [[NSString alloc] initWithData:[CNKIZ_GTMBase64 encodeData:data] encoding:NSUTF8StringEncoding];
     }
     return ciphertext;
 }
 -(NSString *)decryptUseDESWithRgbKey:(NSString*)rgbKey withRgbIV:(Byte*)rgbIV
 {
     //注意和上面的参数一致
-    NSData* cipherData = [GTMBase64 decodeString:self];
+    NSData* cipherData = [CNKIZ_GTMBase64 decodeString:self];
     unsigned char buffer[1024];
     memset(buffer, 0, sizeof(char));
     size_t numBytesDecrypted = 0;
@@ -284,13 +284,13 @@
     if (cryptStatus == kCCSuccess) {
         NSData *data = [NSData dataWithBytes:buffer length:(NSUInteger)numBytesEncrypted];
         
-        ciphertext = [[NSString alloc] initWithData:[GTMBase64 encodeData:data] encoding:NSUTF8StringEncoding];
+        ciphertext = [[NSString alloc] initWithData:[CNKIZ_GTMBase64 encodeData:data] encoding:NSUTF8StringEncoding];
     }
     return ciphertext;
 }
 - (NSString *)decryptUseDESWithKey:(NSString*)key
 {
-    NSData* cipherData = [GTMBase64 decodeString:self];
+    NSData* cipherData = [CNKIZ_GTMBase64 decodeString:self];
     unsigned char buffer[1024];
     memset(buffer, 0, sizeof(char));
     size_t numBytesDecrypted = 0;
@@ -334,14 +334,14 @@
     if (cryptStatus == kCCSuccess) {
         NSData *data = [NSData dataWithBytes:buffer length:(NSUInteger)numBytesEncrypted];
         
-        ciphertext = [[NSString alloc] initWithData:[GTMBase64 encodeData:data] encoding:NSUTF8StringEncoding];
+        ciphertext = [[NSString alloc] initWithData:[CNKIZ_GTMBase64 encodeData:data] encoding:NSUTF8StringEncoding];
     }
     return ciphertext;
 }
 
 - (NSString *)decryptUseDES:(NSString *)cipherText key:(NSString*)key
 {
-    NSData* cipherData = [GTMBase64 decodeString:cipherText];
+    NSData* cipherData = [CNKIZ_GTMBase64 decodeString:cipherText];
     unsigned char buffer[1024];
     memset(buffer, 0, sizeof(char));
     size_t numBytesDecrypted = 0;
