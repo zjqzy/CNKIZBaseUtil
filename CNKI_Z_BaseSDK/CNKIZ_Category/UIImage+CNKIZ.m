@@ -1,12 +1,9 @@
 //
-//  UIImage+Extensions.h
-//
-//  Created by zhujianqi  2013年
-//  Copyright (c) 2013年以后 All rights reserved.
+//  UIImage+CNKIZ.h
 //
 
 
-#import "UIImage+zExtensions.h"
+#import "UIImage+CNKIZ.h"
 #import <QuartzCore/QuartzCore.h>
 
 #define SAWTOOTH_COUNT 10
@@ -83,7 +80,7 @@ static CGContextRef MyCreateBitmapContext (int pixelsWide, int pixelsHigh) {
 #endif
 
 
-@implementation UIImage (zExtensions)
+@implementation UIImage (CNKIZ)
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -764,9 +761,35 @@ static CGContextRef MyCreateBitmapContext (int pixelsWide, int pixelsHigh) {
     
     return array;
 }
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
+
+-(UIImage*)rt_tintedImageWithColor:(UIColor*)color rect:(CGRect)rect level:(CGFloat)level
+{
+    CGRect imageRect = CGRectMake(0.0f, 0.0f, self.size.width, self.size.height);
+    
+    UIGraphicsBeginImageContextWithOptions(imageRect.size, NO, self.scale);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    
+    [self drawInRect:imageRect];
+    
+    CGContextSetFillColorWithColor(ctx, [color CGColor]);
+    CGContextSetAlpha(ctx, level);
+    CGContextSetBlendMode(ctx, kCGBlendModeSourceAtop);
+    CGContextFillRect(ctx, rect);
+    
+    CGImageRef imageRef = CGBitmapContextCreateImage(ctx);
+    UIImage *darkImage = [UIImage imageWithCGImage:imageRef
+                                             scale:self.scale
+                                       orientation:self.imageOrientation];
+    CGImageRelease(imageRef);
+    
+    UIGraphicsEndImageContext();
+    
+    return darkImage;
+}
+
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
 
 
 @end

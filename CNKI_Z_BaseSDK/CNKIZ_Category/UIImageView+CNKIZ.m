@@ -1,14 +1,12 @@
 //
-//  UIImageView+UIImageView_FaceAwareFill.m
-//  faceAwarenessClipping
-//
-//  Created by Julio Andrés Carrettoni on 03/02/13.
-//  Copyright (c) 2013 Julio Andrés Carrettoni. All rights reserved.
+//  UIImageView+CNKIZ.m
 //
 
-#import "UIImageView+UIImageView_FaceAwareFill.h"
 #import <CoreImage/CoreImage.h>
 #import <QuartzCore/QuartzCore.h>
+
+#import "UIImageView+CNKIZ.h"
+
 
 
 static CIDetector* _faceDetector;

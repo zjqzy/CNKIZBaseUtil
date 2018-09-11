@@ -1,5 +1,5 @@
 //
-//  NSData+GZIP.h
+//  NSData+CNKIZ.h
 //
 //  Version 1.0
 //
@@ -34,7 +34,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSData (GZIP)
+@interface NSData (CNKIZ)
 
 - (NSData *)dataWithObject:(id)object;
 - (id)convertDataToObject;

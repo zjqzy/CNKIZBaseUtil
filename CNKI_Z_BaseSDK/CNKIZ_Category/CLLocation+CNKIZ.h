@@ -2,7 +2,9 @@
 //  CLLocation+ZJQLocation.h
 //  
 //
-//  Created by zhujianqi on 16/2/26.
+//  Created by zhu jianqi on 2018/9/20.
+//  Copyright © 2018年 zhu jianqi. All rights reserved.
+//  Email : zhu.jian.qi@163.com
 //
 //
 //  火星坐标系转换扩展

@@ -5,7 +5,7 @@
 
 #import "CNKI_Z_UICKeyChainStore.h"
 
-NSString * const UICKeyChainStoreErrorDomain = @"com.TTKN.uickeychainstore";
+NSString * const CNKIZ_UICKeyChainStoreErrorDomain = @"com.TTKN.uickeychainstore";
 static NSString *_defaultService;
 
 @interface CNKI_Z_UICKeyChainStore ()
@@ -1338,14 +1338,14 @@ static NSString *_defaultService;
 
 + (NSError *)argumentError:(NSString *)message
 {
-    NSError *error = [NSError errorWithDomain:UICKeyChainStoreErrorDomain code:UICKeyChainStoreErrorInvalidArguments userInfo:@{NSLocalizedDescriptionKey: message}];
+    NSError *error = [NSError errorWithDomain:CNKIZ_UICKeyChainStoreErrorDomain code:UICKeyChainStoreErrorInvalidArguments userInfo:@{NSLocalizedDescriptionKey: message}];
     NSLog(@"error: [%@] %@", @(error.code), error.localizedDescription);
     return error;
 }
 
 + (NSError *)conversionError:(NSString *)message
 {
-    NSError *error = [NSError errorWithDomain:UICKeyChainStoreErrorDomain code:-67594 userInfo:@{NSLocalizedDescriptionKey: message}];
+    NSError *error = [NSError errorWithDomain:CNKIZ_UICKeyChainStoreErrorDomain code:-67594 userInfo:@{NSLocalizedDescriptionKey: message}];
     NSLog(@"error: [%@] %@", @(error.code), error.localizedDescription);
     return error;
 }
@@ -1359,14 +1359,14 @@ static NSString *_defaultService;
         message = (__bridge_transfer NSString *)description;
     }
 #endif
-    NSError *error = [NSError errorWithDomain:UICKeyChainStoreErrorDomain code:status userInfo:@{NSLocalizedDescriptionKey: message}];
+    NSError *error = [NSError errorWithDomain:CNKIZ_UICKeyChainStoreErrorDomain code:status userInfo:@{NSLocalizedDescriptionKey: message}];
     NSLog(@"OSStatus error: [%@] %@", @(error.code), error.localizedDescription);
     return error;
 }
 
 + (NSError *)unexpectedError:(NSString *)message
 {
-    NSError *error = [NSError errorWithDomain:UICKeyChainStoreErrorDomain code:-99999 userInfo:@{NSLocalizedDescriptionKey: message}];
+    NSError *error = [NSError errorWithDomain:CNKIZ_UICKeyChainStoreErrorDomain code:-99999 userInfo:@{NSLocalizedDescriptionKey: message}];
     NSLog(@"error: [%@] %@", @(error.code), error.localizedDescription);
     return error;
 }

@@ -32,7 +32,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-extern NSString * const UICKeyChainStoreErrorDomain;
+extern NSString * const CNKIZ_UICKeyChainStoreErrorDomain;
 
 typedef NS_ENUM(NSInteger, UICKeyChainStoreErrorCode) {
     UICKeyChainStoreErrorInvalidArguments = 1,

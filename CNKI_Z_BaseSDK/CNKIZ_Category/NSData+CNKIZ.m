@@ -1,9 +1,5 @@
 //
-//  NSData+GZIP.m
-//
-//
-//  Created by zhujianqi  2013年
-//  Copyright (c) 2013年以后 All rights reserved.
+//  NSData+CNKIZ.m
 //
 //
 //  Distributed under the permissive zlib License
@@ -31,13 +27,13 @@
 //
 
 
-#import "NSData+GZIP.h"
+#import "NSData+CNKIZ.h"
 #import <zlib.h>
 
 #define CHUNK_SIZE 16384
 
 
-@implementation NSData (GZIP)
+@implementation NSData (CNKIZ)
 
 - (NSData *)dataWithObject:(id)object
 {

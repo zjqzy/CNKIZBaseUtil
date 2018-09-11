@@ -1,13 +1,11 @@
 //
-//  NSDate+Addition.h
-//
-//  Created by zhujianqi  2013年
-//  Copyright (c) 2013年以后 All rights reserved.
+//  NSDate+CNKIZ.h
 //
 
-#import "NSDate+Addition.h"
 
-@implementation NSDate (Addition)
+#import "NSDate+CNKIZ.h"
+
+@implementation NSDate (CNKIZ)
 
 - (NSString *)convertDateToStringWithFormat:(NSString *)format
 {

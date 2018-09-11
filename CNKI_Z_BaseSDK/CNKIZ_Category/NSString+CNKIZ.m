@@ -1,19 +1,16 @@
 //
-//  NSString+encrypto.m
-//  CNKIMDL
-//
-//  Created by zhu on 13-10-30.
-//  Copyright (c) 2013年 zhu. All rights reserved.
+//  NSString+CNKIZ.m
 //
 
-#import "NSString+zExtensions.h"
+
+#import "NSString+CNKIZ.h"
 #import "GTMBase64.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonCryptor.h>
 
 #define gIv             @"0123456789012345" //自行修改16位 -->偏移量
 
-@implementation NSString (zExtensions)
+@implementation NSString (CNKIZ)
 
 - (NSNumber*)stringToNSNumber
 {
@@ -60,20 +57,13 @@
 {
     //NSString 的 stringByAddingPercentEscapesUsingEncoding 可以对 url 参数进行编码，但是有点小问题，不会对所有需要编码的字符都编码。我们可以通过  CFStringRef 的
     
-    NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
-                                                                                             (CFStringRef)self,
-                                                                                             NULL,
-                                                                                             CFSTR("!*'();:@&=+$,/?%#[]"),
-                                                                                             kCFStringEncodingUTF8));
+    NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)self,NULL,CFSTR("!*'();:@&=+$,/?%#[]"),kCFStringEncodingUTF8));
     return result;
 }
 
 - (NSString *)URLDecodedString
 {
-    NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,
-                                                                                                             (CFStringRef)self,
-                                                                                                             CFSTR(""),
-                                                                                                             kCFStringEncodingUTF8));
+    NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,(CFStringRef)self,CFSTR(""),kCFStringEncodingUTF8));
     return result;
 }
 
@@ -407,7 +397,7 @@
         
     {
         
-        newSize = dataLength + diff;
+        newSize = (int)dataLength + diff;
         
     }
     
@@ -554,4 +544,91 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:self];
 }
+/////////////////////////////////////////////
+///////////      正则    ////////////
+/////////////////////////////////////////////
+#pragma mark - 正则
+-(NSString *) stringByReplacingRegexPattern:(NSString *)regex withString:(NSString *) replacement caseInsensitive:(BOOL)ignoreCase {
+    return [self stringByReplacingRegexPattern:regex withString:replacement caseInsensitive:ignoreCase treatAsOneLine:NO];
+}
+
+-(NSString *) stringByReplacingRegexPattern:(NSString *)regex withString:(NSString *) replacement caseInsensitive:(BOOL) ignoreCase treatAsOneLine:(BOOL) assumeMultiLine {
+    
+    NSUInteger options=0;
+    if (ignoreCase) {
+        options = options | NSRegularExpressionCaseInsensitive;
+    }
+    if (assumeMultiLine) {
+        options = options | NSRegularExpressionDotMatchesLineSeparators;
+    }
+    
+    NSError *error=nil;
+    NSRegularExpression *pattern = [NSRegularExpression regularExpressionWithPattern:regex options:options error:&error];
+    if (error) {
+        NSLog(@"Error creating Regex: %@",[error description]);
+        return nil;
+    }
+    
+    NSString *retVal= [pattern stringByReplacingMatchesInString:self options:0 range:NSMakeRange(0, [self length]) withTemplate:replacement];
+    return retVal;
+}
+
+-(NSString *) stringByReplacingRegexPattern:(NSString *)regex withString:(NSString *) replacement {
+    return [self stringByReplacingRegexPattern:regex withString:replacement caseInsensitive:NO treatAsOneLine:NO];
+}
+
+-(NSArray *) stringsByExtractingGroupsUsingRegexPattern:(NSString *)regex caseInsensitive:(BOOL) ignoreCase treatAsOneLine:(BOOL) assumeMultiLine {
+    NSUInteger options=0;
+    if (ignoreCase) {
+        options = options | NSRegularExpressionCaseInsensitive;
+    }
+    if (assumeMultiLine) {
+        options = options | NSRegularExpressionDotMatchesLineSeparators;
+    }
+    
+    NSError *error=nil;
+    NSRegularExpression *pattern = [NSRegularExpression regularExpressionWithPattern:regex options:options error:&error];
+    if (error) {
+        NSLog(@"Error creating Regex: %@",[error description]);
+        return nil;
+    }
+    
+    __block NSMutableArray *retVal = [NSMutableArray array];
+    [pattern enumerateMatchesInString:self options:0 range:NSMakeRange(0, [self length]) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+        //Note, we only want to return the things in parens, so we're skipping index 0 intentionally
+        for (int i=1; i<[result numberOfRanges]; i++) {
+            NSString *matchedString=[self substringWithRange:[result rangeAtIndex:i]];
+            [retVal addObject:matchedString];
+        }
+    }];
+    return retVal;
+}
+
+-(NSArray *) stringsByExtractingGroupsUsingRegexPattern:(NSString *)regex {
+    return [self stringsByExtractingGroupsUsingRegexPattern:regex caseInsensitive:NO treatAsOneLine:NO];
+}
+
+-(BOOL) matchesPatternRegexPattern:(NSString *)regex caseInsensitive:(BOOL) ignoreCase treatAsOneLine:(BOOL) assumeMultiLine {
+    NSUInteger options=0;
+    if (ignoreCase) {
+        options = options | NSRegularExpressionCaseInsensitive;
+    }
+    if (assumeMultiLine) {
+        options = options | NSRegularExpressionDotMatchesLineSeparators;
+    }
+    
+    NSError *error=nil;
+    NSRegularExpression *pattern = [NSRegularExpression regularExpressionWithPattern:regex options:options error:&error];
+    if (error) {
+        NSLog(@"Error creating Regex: %@",[error description]);
+        return NO;  //Can't possibly match an invalid Regex
+    }
+    
+    return ([pattern numberOfMatchesInString:self options:0 range:NSMakeRange(0, [self length])] > 0);
+}
+
+-(BOOL) matchesPatternRegexPattern:(NSString *)regex {
+    return [self matchesPatternRegexPattern:regex caseInsensitive:NO treatAsOneLine:NO];
+}
+
 @end

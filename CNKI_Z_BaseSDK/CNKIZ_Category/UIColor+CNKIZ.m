@@ -20,7 +20,7 @@
 // ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import "UIColor_NSColor_Colours.h"
+#import "UIColor+CNKIZ.h"
 #import <objc/runtime.h>
 
 #pragma mark - Static Block
@@ -32,12 +32,12 @@ static CGFloat (^RAD)(CGFloat) = ^CGFloat (CGFloat degree){
 #pragma mark - Create correct iOS/OSX implementation
 #if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
-@implementation UIColor (Colours)
+@implementation UIColor (CNKIZ)
 #define ColorClass UIColor
 
 #elif TARGET_OS_MAC
 #import <AppKit/AppKit.h>
-@implementation NSColor (Colours)
+@implementation NSColor (CNKIZ)
 #define ColorClass NSColor
 
 #endif
