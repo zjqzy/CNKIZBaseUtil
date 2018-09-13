@@ -12,6 +12,8 @@
 		660CB2ED214A39B9004B1D7F /* CNKI_Z_ImageButtonLeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 660CB2E7214A39B8004B1D7F /* CNKI_Z_ImageButtonLeft.m */; };
 		660CB2EE214A39B9004B1D7F /* CNKI_Z_ImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 660CB2E8214A39B8004B1D7F /* CNKI_Z_ImageButton.m */; };
 		660CB2EF214A39B9004B1D7F /* CNKI_Z_ImageButtonTop.m in Sources */ = {isa = PBXBuildFile; fileRef = 660CB2EA214A39B9004B1D7F /* CNKI_Z_ImageButtonTop.m */; };
+		660CB2F4214A3C95004B1D7F /* CNKI_Z_Lib.m in Sources */ = {isa = PBXBuildFile; fileRef = 660CB2F0214A3C94004B1D7F /* CNKI_Z_Lib.m */; };
+		660CB2F8214A3D88004B1D7F /* CNKI_Z_Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 660CB2F6214A3D87004B1D7F /* CNKI_Z_Operation.m */; };
 		6630F59D2142484400773B2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F59C2142484400773B2E /* AppDelegate.m */; };
 		6630F5A02142484400773B2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F59F2142484400773B2E /* ViewController.m */; };
 		6630F5A32142484400773B2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6630F5A12142484400773B2E /* Main.storyboard */; };
@@ -71,6 +73,10 @@
 		660CB2E8214A39B8004B1D7F /* CNKI_Z_ImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNKI_Z_ImageButton.m; sourceTree = "<group>"; };
 		660CB2E9214A39B9004B1D7F /* CNKI_Z_ImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKI_Z_ImageButton.h; sourceTree = "<group>"; };
 		660CB2EA214A39B9004B1D7F /* CNKI_Z_ImageButtonTop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNKI_Z_ImageButtonTop.m; sourceTree = "<group>"; };
+		660CB2F0214A3C94004B1D7F /* CNKI_Z_Lib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNKI_Z_Lib.m; sourceTree = "<group>"; };
+		660CB2F1214A3C95004B1D7F /* CNKI_Z_Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKI_Z_Lib.h; sourceTree = "<group>"; };
+		660CB2F6214A3D87004B1D7F /* CNKI_Z_Operation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNKI_Z_Operation.m; sourceTree = "<group>"; };
+		660CB2F7214A3D88004B1D7F /* CNKI_Z_Operation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKI_Z_Operation.h; sourceTree = "<group>"; };
 		6630F5982142484400773B2E /* CNKIZBaseUtil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CNKIZBaseUtil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6630F59B2142484400773B2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6630F59C2142484400773B2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -277,16 +283,20 @@
 		6630F6062142491F00773B2E /* CNKIZ_Common */ = {
 			isa = PBXGroup;
 			children = (
+				6630F63B2142491F00773B2E /* CNKI_Z_Device.h */,
+				6630F6092142491F00773B2E /* CNKI_Z_Device.m */,
 				6630F63F2142491F00773B2E /* CNKI_Z_Exception.h */,
 				6630F60E2142491F00773B2E /* CNKI_Z_Exception.m */,
 				6630F6102142491F00773B2E /* CNKI_Z_File.h */,
 				6630F63D2142491F00773B2E /* CNKI_Z_File.m */,
 				6630F60C2142491F00773B2E /* CNKI_Z_GDataXMLNode.h */,
 				6630F6362142491F00773B2E /* CNKI_Z_GDataXMLNode.m */,
+				660CB2F1214A3C95004B1D7F /* CNKI_Z_Lib.h */,
+				660CB2F0214A3C94004B1D7F /* CNKI_Z_Lib.m */,
+				660CB2F7214A3D88004B1D7F /* CNKI_Z_Operation.h */,
+				660CB2F6214A3D87004B1D7F /* CNKI_Z_Operation.m */,
 				6630F6372142491F00773B2E /* CNKI_Z_Queue.h */,
 				6630F60B2142491F00773B2E /* CNKI_Z_Queue.m */,
-				6630F63B2142491F00773B2E /* CNKI_Z_Device.h */,
-				6630F6092142491F00773B2E /* CNKI_Z_Device.m */,
 				6630F68621424BA000773B2E /* CNKI_Z_UICKeyChainStore.h */,
 				6630F68521424BA000773B2E /* CNKI_Z_UICKeyChainStore.m */,
 			);
@@ -444,6 +454,8 @@
 				6630F5A02142484400773B2E /* ViewController.m in Sources */,
 				6630F65E2142491F00773B2E /* CNKI_Z_Queue.m in Sources */,
 				6630F6422142491F00773B2E /* UIView+CNKIZ.m in Sources */,
+				660CB2F8214A3D88004B1D7F /* CNKI_Z_Operation.m in Sources */,
+				660CB2F4214A3C95004B1D7F /* CNKI_Z_Lib.m in Sources */,
 				660CB2ED214A39B9004B1D7F /* CNKI_Z_ImageButtonLeft.m in Sources */,
 				6630F6772142491F00773B2E /* CNKI_Z_File.m in Sources */,
 				6630F6502142491F00773B2E /* NSObject+CNKIZ.m in Sources */,
