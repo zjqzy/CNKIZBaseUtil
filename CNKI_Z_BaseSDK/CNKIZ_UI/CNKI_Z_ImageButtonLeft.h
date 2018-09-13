@@ -1,10 +1,10 @@
 //
-//  CImageButtonLeft.h
+//  CNKI_Z_ImageButtonLeft.h
 //
 
 #import <UIKit/UIKit.h>
 
-@interface CImageButtonLeft : UIControl
+@interface CNKI_Z_ImageButtonLeft : UIControl
 
 @property (strong) int (^blockBack)(NSMutableDictionary *para);
 @property (nonatomic,strong) NSMutableDictionary *info;

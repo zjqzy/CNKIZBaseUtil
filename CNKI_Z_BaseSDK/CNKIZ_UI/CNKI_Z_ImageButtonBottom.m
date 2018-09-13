@@ -1,10 +1,11 @@
 //
-//  CImageButtonTop.m
+//  CNKI_Z_ImageButtonBottom.m
 //
 
-#import "CImageButtonTop.h"
 
-@interface CImageButtonTop()
+#import "CNKI_Z_ImageButtonBottom.h"
+
+@interface CNKI_Z_ImageButtonBottom()
 
 @property (nonatomic,strong) UIView *contentView;
 
@@ -16,15 +17,15 @@
 
 @end
 
-@implementation CImageButtonTop
+@implementation CNKI_Z_ImageButtonBottom
 
 -(void)dealloc
 {
     //析构
     
-#ifdef DEBUG
-    //NSLog(@"析构 CImageButtonTop");
-#endif
+//#ifdef DEBUG
+//    NSLog(@"析构 %@", NSStringFromClass([self class]));
+//#endif
     
     self.blockBack=nil;
     
@@ -79,10 +80,10 @@
         [_contentView addSubview:_lbTitle];
         
         //
-        _topImageView=[[UIImageView alloc] init];
-        _topImageView.backgroundColor=[UIColor clearColor];
-        [_contentView addSubview:_topImageView];
-        _topImageView.contentMode=UIViewContentModeScaleAspectFit;
+        _bottomImageView=[[UIImageView alloc] init];
+        _bottomImageView.backgroundColor=[UIColor clearColor];
+        [_contentView addSubview:_bottomImageView];
+        _bottomImageView.contentMode=UIViewContentModeScaleAspectFit;
         
         //
         _activityIndicatorView=[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -106,23 +107,16 @@
     {
         CGRect rectContentBound=_contentView.bounds;
         
-        
-        if (_imgViewHeight<2) {
-            _imgViewHeight=viewRect.size.height * 0.5f;
-        }
         CGRect rect1=rectContentBound;
-        rect1.size.height=_imgViewHeight;
-        _topImageView.frame=CGRectInset(rect1, _imageEdgeWidth, _imageEdgeHeight);
+        rect1.size.height=viewRect.size.height * 0.5f;
+        _lbTitle.frame=rect1;
+        _activityIndicatorView.frame=rect1;
         
-        //
+        
         CGRect rect2=rectContentBound;
-        rect2.origin.y=CGRectGetMaxY(rect1)+_spacing;
-        if (_titleHeight<2) {
-            _titleHeight=rectContentBound.size.height-rect2.origin.y;
-        }
-        rect2.size.height=_titleHeight;
-        _lbTitle.frame=rect2;
-        _activityIndicatorView.frame=rect2;
+        rect2.origin.y=rect1.origin.y+rect1.size.height+_spacing;
+        rect2.size.height=rectContentBound.size.height-rect2.origin.y;
+        _bottomImageView.frame=rect2;
         
     }
     
@@ -141,12 +135,6 @@
 -(void)dataPrepare
 {
     //数据
-    
-    _imageEdgeWidth=0;
-    _imageEdgeHeight=0;
-    _imgViewHeight=0;
-    _titleHeight=0;
-    
     _spacing=0;
 }
 -(void)initAfter
@@ -164,7 +152,7 @@
         self.blockBack(self.info);
     }
 }
--(void)addClickBlock:(int (^)(NSMutableDictionary*))block1
+-(void)addClickBlock:(int (^)(NSMutableDictionary *))block1
 {
     self.blockBack=block1;
     [self addTarget:self action:@selector(doClick:) forControlEvents:UIControlEventTouchUpInside];

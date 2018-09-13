@@ -1,30 +1,25 @@
 //
-//  CImageButton.m
-//  CNKIMobile
-//
-//  Created by zhujianqi on 15/12/3.
-//  Copyright (c) 2015年 CNKI. All rights reserved.
+//  CNKI_Z_ImageButtonLeft.m
 //
 
-#import "CImageButton.h"
 
+#import "CNKI_Z_ImageButtonLeft.h"
 
-@interface CImageButton()
+@interface CNKI_Z_ImageButtonLeft()
 
 @property (nonatomic,strong) UIView *contentView;
 
 
 @end
 
-@implementation CImageButton
-
+@implementation CNKI_Z_ImageButtonLeft
 -(void)dealloc
 {
     //析构
     
-#ifdef DEBUG
-    //NSLog(@"析构 CImageButton");
-#endif
+//#ifdef DEBUG
+//    NSLog(@"析构 %@", NSStringFromClass([self class]));
+//#endif
     
     self.blockBack=nil;
     
@@ -45,7 +40,7 @@
         CGRect rectView=frame;
         rectView.origin=CGPointZero;
         [self customViewInit:rectView];
-        
+
     }
     return self;
 }
@@ -64,9 +59,9 @@
     _contentView=[[UIView alloc] init];
     _contentView.userInteractionEnabled=NO;
     _contentView.backgroundColor=[UIColor clearColor];
-    //    _contentView.layer.borderColor =[UIColor colorWithRed:229/255.0f green:229/255.0f blue:229/255.0f alpha:1].CGColor;
-    //    _contentView.layer.borderWidth = 1.0f;
-    //    _contentView.layer.masksToBounds = YES;
+//    _contentView.layer.borderColor =[UIColor colorWithRed:229/255.0f green:229/255.0f blue:229/255.0f alpha:1].CGColor;
+//    _contentView.layer.borderWidth = 1.0f;
+//    _contentView.layer.masksToBounds = YES;
     
     [self addSubview:_contentView];
     
@@ -75,18 +70,14 @@
         //
         _lbTitle=[[UILabel alloc] init];
         _lbTitle.backgroundColor=[UIColor clearColor];
-        _lbTitle.textAlignment=NSTextAlignmentCenter;
+        _lbTitle.textAlignment=NSTextAlignmentLeft;
         [_contentView addSubview:_lbTitle];
         
         //
-        _imageView=[[UIImageView alloc] init];
-        _imageView.backgroundColor=[UIColor clearColor];
-        [_contentView addSubview:_imageView];
-        _imageView.contentMode=UIViewContentModeScaleAspectFit;
-        
-        _lineView = [[UIView alloc]init];
-        _lineView.backgroundColor = _lineBjColor;
-        [_contentView addSubview:_lineView];
+        _leftImageView=[[UIImageView alloc] init];
+        _leftImageView.backgroundColor=[UIColor clearColor];
+        [_contentView addSubview:_leftImageView];
+        _leftImageView.contentMode=UIViewContentModeScaleAspectFit;
         
         //
         _activityIndicatorView=[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -111,15 +102,20 @@
         CGRect rectContentBound=_contentView.bounds;
         
         CGRect rect1=rectContentBound;
-        
-        _lbTitle.frame=CGRectInset(rect1, _titleEdge, 2);
-        _imageView.frame=CGRectInset(rect1, _imageEdge,_imageEdgeHeight);
+        rect1.size.width=_imgViewWidth;
+        if (_imgViewHeight>2 && _imgViewHeight<rectContentBound.size.height) {
+            rect1.size.height=_imgViewHeight;
+            rect1.origin.y=(rectContentBound.size.height-_imgViewHeight)*0.5f;
+        }
+        _leftImageView.frame=rect1;
         _activityIndicatorView.frame=rect1;
+
         
-        CGRect rectLine = rectContentBound;
-        rectLine.size.width = 1;
-        rectLine.origin.x = rect1.size.width - rectLine.size.width;
-        _lineView.frame = rectLine;
+        CGRect rect2=rectContentBound;
+        rect2.origin.x=rect1.origin.x+rect1.size.width+_spacing;
+        rect2.size.width=rectContentBound.size.width-rect2.origin.x;
+        _lbTitle.frame=rect2;
+
     }
     
 }
@@ -127,7 +123,7 @@
 -(void)layoutSubviews
 {
     [super layoutSubviews];
-//    [self resizeViews:self.bounds];
+    //[self resizeViews:self.bounds];
 }
 -(void)setFrame:(CGRect)frame
 {
@@ -137,9 +133,11 @@
 -(void)dataPrepare
 {
     //数据
-    _imageEdge=10;
-    _imageEdgeHeight=2;
-    _titleEdge = 10;
+    _spacing=5;
+    
+    _imgViewWidth=32;
+    _imgViewHeight=0;
+    
 }
 -(void)initAfter
 {
@@ -148,12 +146,7 @@
 -(void)refresh
 {
     //刷新
-   
-}
 
-- (void)setLineBjColor:(UIColor *)lineBjColor{
-    _lineBjColor = lineBjColor;
-    _lineView.backgroundColor = _lineBjColor;
 }
 
 //-(void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
@@ -179,11 +172,9 @@
         self.blockBack(self.info);
     }
 }
-
--(void)addClickBlock:(int (^)(NSMutableDictionary*))block1
+-(void)addClickBlock:(int (^)(NSMutableDictionary *))block1
 {
     self.blockBack=block1;
     [self addTarget:self action:@selector(doClick:) forControlEvents:UIControlEventTouchUpInside];
 }
-
 @end

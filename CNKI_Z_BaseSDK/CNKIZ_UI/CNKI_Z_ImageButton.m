@@ -1,31 +1,26 @@
 //
-//  CImageButtonBottom.m
+//  CNKI_Z_ImageButton.m
 //
 
+#import "CNKI_Z_ImageButton.h"
 
-#import "CImageButtonBottom.h"
 
-@interface CImageButtonBottom()
+@interface CNKI_Z_ImageButton()
 
 @property (nonatomic,strong) UIView *contentView;
 
--(void)customViewInit:(CGRect)viewRect;     //创建
--(void)resizeViews:(CGRect)viewRect;        //布局
--(void)dataPrepare;                         //数据
--(void)initAfter;                           //线程初始化
--(void)refresh;                             //刷新
 
 @end
 
-@implementation CImageButtonBottom
+@implementation CNKI_Z_ImageButton
 
 -(void)dealloc
 {
     //析构
     
-#ifdef DEBUG
-    //NSLog(@"析构 CImageButtonBottom");
-#endif
+//#ifdef DEBUG
+//    NSLog(@"析构 %@", NSStringFromClass([self class]));
+//#endif
     
     self.blockBack=nil;
     
@@ -46,6 +41,7 @@
         CGRect rectView=frame;
         rectView.origin=CGPointZero;
         [self customViewInit:rectView];
+        
     }
     return self;
 }
@@ -68,7 +64,6 @@
     //    _contentView.layer.borderWidth = 1.0f;
     //    _contentView.layer.masksToBounds = YES;
     
-    
     [self addSubview:_contentView];
     
     if (_contentView) {
@@ -80,18 +75,22 @@
         [_contentView addSubview:_lbTitle];
         
         //
-        _bottomImageView=[[UIImageView alloc] init];
-        _bottomImageView.backgroundColor=[UIColor clearColor];
-        [_contentView addSubview:_bottomImageView];
-        _bottomImageView.contentMode=UIViewContentModeScaleAspectFit;
+        _imageView=[[UIImageView alloc] init];
+        _imageView.backgroundColor=[UIColor clearColor];
+        [_contentView addSubview:_imageView];
+        _imageView.contentMode=UIViewContentModeScaleAspectFit;
+        
+        _lineView = [[UIView alloc]init];
+        _lineView.backgroundColor = _lineBjColor;
+        [_contentView addSubview:_lineView];
         
         //
         _activityIndicatorView=[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         _activityIndicatorView.backgroundColor=[UIColor clearColor];
         _activityIndicatorView.hidesWhenStopped=YES;
         [_contentView addSubview:_activityIndicatorView];
+        //[_activityIndicatorView startAnimating];
     }
-    
 }
 
 -(void)resizeViews:(CGRect)viewRect
@@ -108,16 +107,15 @@
         CGRect rectContentBound=_contentView.bounds;
         
         CGRect rect1=rectContentBound;
-        rect1.size.height=viewRect.size.height * 0.5f;
-        _lbTitle.frame=rect1;
+        
+        _lbTitle.frame=CGRectInset(rect1, _titleEdge, 2);
+        _imageView.frame=CGRectInset(rect1, _imageEdge,_imageEdgeHeight);
         _activityIndicatorView.frame=rect1;
         
-        
-        CGRect rect2=rectContentBound;
-        rect2.origin.y=rect1.origin.y+rect1.size.height+_spacing;
-        rect2.size.height=rectContentBound.size.height-rect2.origin.y;
-        _bottomImageView.frame=rect2;
-        
+        CGRect rectLine = rectContentBound;
+        rectLine.size.width = 1;
+        rectLine.origin.x = rect1.size.width - rectLine.size.width;
+        _lineView.frame = rectLine;
     }
     
 }
@@ -125,7 +123,7 @@
 -(void)layoutSubviews
 {
     [super layoutSubviews];
-    //[self resizeViews:self.bounds];
+//    [self resizeViews:self.bounds];
 }
 -(void)setFrame:(CGRect)frame
 {
@@ -135,7 +133,9 @@
 -(void)dataPrepare
 {
     //数据
-    _spacing=0;
+    _imageEdge=10;
+    _imageEdgeHeight=2;
+    _titleEdge = 10;
 }
 -(void)initAfter
 {
@@ -144,15 +144,39 @@
 -(void)refresh
 {
     //刷新
-    
+   
 }
+
+- (void)setLineBjColor:(UIColor *)lineBjColor{
+    _lineBjColor = lineBjColor;
+    _lineView.backgroundColor = _lineBjColor;
+}
+
+//-(void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
+//{
+////可以监视到 用户单击
+//    if (self.state) {
+//        self.lbName.textColor=[UIColor blueColor];
+//        self.lbRecord.textColor=[UIColor blueColor];
+//    }
+//    else
+//    {
+//        self.lbName.textColor=[UIColor blackColor];
+//        self.lbRecord.textColor=[UIColor blackColor];
+//    }
+//    NSLog(@"%@",@(self.state));
+//
+//    [super endTrackingWithTouch:touch withEvent:event];
+//}
+
 -(void)doClick:(id)sender
 {
     if (self.blockBack) {
         self.blockBack(self.info);
     }
 }
--(void)addClickBlock:(int (^)(NSMutableDictionary *))block1
+
+-(void)addClickBlock:(int (^)(NSMutableDictionary*))block1
 {
     self.blockBack=block1;
     [self addTarget:self action:@selector(doClick:) forControlEvents:UIControlEventTouchUpInside];

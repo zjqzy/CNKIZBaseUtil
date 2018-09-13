@@ -1,28 +1,30 @@
 //
-//  CImageButtonLeft.m
-//  CNKIMobile
-//
-//  Created by zhujianqi on 15/11/2.
-//  Copyright (c) 2015年 CNKI. All rights reserved.
+//  CNKI_Z_ImageButtonTop.m
 //
 
-#import "CImageButtonLeft.h"
+#import "CNKI_Z_ImageButtonTop.h"
 
-@interface CImageButtonLeft()
+@interface CNKI_Z_ImageButtonTop()
 
 @property (nonatomic,strong) UIView *contentView;
 
+-(void)customViewInit:(CGRect)viewRect;     //创建
+-(void)resizeViews:(CGRect)viewRect;        //布局
+-(void)dataPrepare;                         //数据
+-(void)initAfter;                           //线程初始化
+-(void)refresh;                             //刷新
 
 @end
 
-@implementation CImageButtonLeft
+@implementation CNKI_Z_ImageButtonTop
+
 -(void)dealloc
 {
     //析构
     
-#ifdef DEBUG
-    //NSLog(@"析构 CImageButtonLeft");
-#endif
+//#ifdef DEBUG
+//    NSLog(@"析构 %@", NSStringFromClass([self class]));
+//#endif
     
     self.blockBack=nil;
     
@@ -43,7 +45,6 @@
         CGRect rectView=frame;
         rectView.origin=CGPointZero;
         [self customViewInit:rectView];
-
     }
     return self;
 }
@@ -62,9 +63,10 @@
     _contentView=[[UIView alloc] init];
     _contentView.userInteractionEnabled=NO;
     _contentView.backgroundColor=[UIColor clearColor];
-//    _contentView.layer.borderColor =[UIColor colorWithRed:229/255.0f green:229/255.0f blue:229/255.0f alpha:1].CGColor;
-//    _contentView.layer.borderWidth = 1.0f;
-//    _contentView.layer.masksToBounds = YES;
+    //    _contentView.layer.borderColor =[UIColor colorWithRed:229/255.0f green:229/255.0f blue:229/255.0f alpha:1].CGColor;
+    //    _contentView.layer.borderWidth = 1.0f;
+    //    _contentView.layer.masksToBounds = YES;
+    
     
     [self addSubview:_contentView];
     
@@ -73,22 +75,22 @@
         //
         _lbTitle=[[UILabel alloc] init];
         _lbTitle.backgroundColor=[UIColor clearColor];
-        _lbTitle.textAlignment=NSTextAlignmentLeft;
+        _lbTitle.textAlignment=NSTextAlignmentCenter;
         [_contentView addSubview:_lbTitle];
         
         //
-        _leftImageView=[[UIImageView alloc] init];
-        _leftImageView.backgroundColor=[UIColor clearColor];
-        [_contentView addSubview:_leftImageView];
-        _leftImageView.contentMode=UIViewContentModeScaleAspectFit;
+        _topImageView=[[UIImageView alloc] init];
+        _topImageView.backgroundColor=[UIColor clearColor];
+        [_contentView addSubview:_topImageView];
+        _topImageView.contentMode=UIViewContentModeScaleAspectFit;
         
         //
         _activityIndicatorView=[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         _activityIndicatorView.backgroundColor=[UIColor clearColor];
         _activityIndicatorView.hidesWhenStopped=YES;
         [_contentView addSubview:_activityIndicatorView];
-        //[_activityIndicatorView startAnimating];
     }
+    
 }
 
 -(void)resizeViews:(CGRect)viewRect
@@ -104,21 +106,24 @@
     {
         CGRect rectContentBound=_contentView.bounds;
         
-        CGRect rect1=rectContentBound;
-        rect1.size.width=_imgViewWidth;
-        if (_imgViewHeight>2 && _imgViewHeight<rectContentBound.size.height) {
-            rect1.size.height=_imgViewHeight;
-            rect1.origin.y=(rectContentBound.size.height-_imgViewHeight)*0.5f;
-        }
-        _leftImageView.frame=rect1;
-        _activityIndicatorView.frame=rect1;
-
         
+        if (_imgViewHeight<2) {
+            _imgViewHeight=viewRect.size.height * 0.5f;
+        }
+        CGRect rect1=rectContentBound;
+        rect1.size.height=_imgViewHeight;
+        _topImageView.frame=CGRectInset(rect1, _imageEdgeWidth, _imageEdgeHeight);
+        
+        //
         CGRect rect2=rectContentBound;
-        rect2.origin.x=rect1.origin.x+rect1.size.width+_spacing;
-        rect2.size.width=rectContentBound.size.width-rect2.origin.x;
+        rect2.origin.y=CGRectGetMaxY(rect1)+_spacing;
+        if (_titleHeight<2) {
+            _titleHeight=rectContentBound.size.height-rect2.origin.y;
+        }
+        rect2.size.height=_titleHeight;
         _lbTitle.frame=rect2;
-
+        _activityIndicatorView.frame=rect2;
+        
     }
     
 }
@@ -136,11 +141,13 @@
 -(void)dataPrepare
 {
     //数据
-    _spacing=5;
     
-    _imgViewWidth=32;
+    _imageEdgeWidth=0;
+    _imageEdgeHeight=0;
     _imgViewHeight=0;
+    _titleHeight=0;
     
+    _spacing=0;
 }
 -(void)initAfter
 {
@@ -149,35 +156,18 @@
 -(void)refresh
 {
     //刷新
-
+    
 }
-
-//-(void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
-//{
-////可以监视到 用户单击
-//    if (self.state) {
-//        self.lbName.textColor=[UIColor blueColor];
-//        self.lbRecord.textColor=[UIColor blueColor];
-//    }
-//    else
-//    {
-//        self.lbName.textColor=[UIColor blackColor];
-//        self.lbRecord.textColor=[UIColor blackColor];
-//    }
-//    NSLog(@"%@",@(self.state));
-//
-//    [super endTrackingWithTouch:touch withEvent:event];
-//}
-
 -(void)doClick:(id)sender
 {
     if (self.blockBack) {
         self.blockBack(self.info);
     }
 }
--(void)addClickBlock:(int (^)(NSMutableDictionary *))block1
+-(void)addClickBlock:(int (^)(NSMutableDictionary*))block1
 {
     self.blockBack=block1;
     [self addTarget:self action:@selector(doClick:) forControlEvents:UIControlEventTouchUpInside];
 }
+
 @end

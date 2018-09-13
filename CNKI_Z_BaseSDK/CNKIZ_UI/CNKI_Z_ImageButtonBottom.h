@@ -1,11 +1,11 @@
 //
-//  CImageButtonBottom.h
+//  CNKI_Z_ImageButtonBottom.h
 //
 
 
 #import <UIKit/UIKit.h>
 
-@interface CImageButtonBottom : UIControl
+@interface CNKI_Z_ImageButtonBottom : UIControl
 
 @property (strong) int (^blockBack)(NSMutableDictionary* para);
 

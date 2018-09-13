@@ -1,28 +1,25 @@
 //
-//  CImageButtonRight.m
-//  CNKIMobile
-//
-//  Created by cnki on 15/11/30.
-//  Copyright (c) 2015年 CNKI. All rights reserved.
+//  CNKI_Z_ImageButtonRight.m
 //
 
-#import "CImageButtonRight.h"
 
-@interface CImageButtonRight ()
+#import "CNKI_Z_ImageButtonRight.h"
+
+@interface CNKI_Z_ImageButtonRight ()
 
 @property(nonatomic,strong)UIView *contentView;
 
 @end
 
-@implementation CImageButtonRight
+@implementation CNKI_Z_ImageButtonRight
 
 -(void)dealloc
 {
     //析构
     
-#ifdef DEBUG
-    //NSLog(@"析构 CImageButtonRight");
-#endif
+//#ifdef DEBUG
+//    NSLog(@"析构 %@", NSStringFromClass([self class]));
+//#endif
     
     self.blockBack=nil;
     
