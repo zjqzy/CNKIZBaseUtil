@@ -8,7 +8,7 @@
 
 /*
  
- 说明
+ 中国知网 基础框架 iOS平台
  
  【CNKIZ_Category】类别
  【CNKIZ_Common】 通用类

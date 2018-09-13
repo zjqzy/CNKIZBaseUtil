@@ -181,6 +181,13 @@
 			path = CNKIZ_UI;
 			sourceTree = "<group>";
 		};
+		660CB2F9214A432E004B1D7F /* CNKIZ_Scan */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CNKIZ_Scan;
+			sourceTree = "<group>";
+		};
 		6630F58F2142484400773B2E = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +250,7 @@
 				666748E82147A79000C06C58 /* CNKI_Z_BaseSDK.h */,
 				6630F5D02142491F00773B2E /* CNKIZ_Category */,
 				6630F6062142491F00773B2E /* CNKIZ_Common */,
+				660CB2F9214A432E004B1D7F /* CNKIZ_Scan */,
 				660CB2E0214A391A004B1D7F /* CNKIZ_UI */,
 			);
 			path = CNKI_Z_BaseSDK;
