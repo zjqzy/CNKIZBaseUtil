@@ -12,11 +12,8 @@
 #include <ifaddrs.h>    //ip
 #include <arpa/inet.h>  //ip
 
+#import "CNKI_Z_UICKeyChainStore.h"
 #import "CNKI_Z_Device.h"
-//#import "UIDevice+IdentifierAddition.h"
-//#import "OpenUDID.h"
-#import "UICKeyChainStore.h"
-//#import "CLocation.h"
 
 @implementation CNKI_Z_Device
 static CNKI_Z_Device *s_device = nil;
@@ -80,10 +77,10 @@ static CNKI_Z_Device *s_device = nil;
 
     {
         //BA02A2FB-E934-442D-93F5-14B489653F2E
-        NSString *deviceId = [UICKeyChainStore stringForKey:@"deviceId" service:@"TTKN"];
+        NSString *deviceId = [CNKI_Z_UICKeyChainStore stringForKey:@"deviceId" service:@"TTKN"];
         if ([deviceId length]<2) {
             deviceId = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
-            [UICKeyChainStore setString:deviceId forKey:@"deviceId" service:@"TTKN"];
+            [CNKI_Z_UICKeyChainStore setString:deviceId forKey:@"deviceId" service:@"TTKN"];
         }
         self.uniqueDeviceId=deviceId;
     }

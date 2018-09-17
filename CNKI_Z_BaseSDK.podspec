@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
 
 
-  s.author             = { "zjqzy" => "zjqzy03080312@163.com" }
+  s.author       = { "zjqzy" => "zjqzy03080312@163.com" }
 
   s.platform     = :ios, "9.0"
 
@@ -22,7 +22,8 @@ Pod::Spec.new do |s|
 
   s.subspec 'CNKI_Z_BaseSDK' do |base|
 
-    # base.source_files = 'CNKI_Z_BaseSDK/cnkiz.h'
+# base.source_files = 'CNKI_Z_BaseSDK/CNKI_Z_BaseSDK.h'
+# base.public_header_files = 'CNKI_Z_BaseSDK/CNKI_Z_BaseSDK.h'
 
     base.subspec 'CNKIZ_Category' do |category|
       category.source_files = 'CNKI_Z_BaseSDK/CNKIZ_Category/**/*'
@@ -30,6 +31,10 @@ Pod::Spec.new do |s|
 
     base.subspec 'CNKIZ_Common' do |common|
       common.source_files = 'CNKI_Z_BaseSDK/CNKIZ_Common/**/*'
+    end
+
+    base.subspec 'CNKIZ_UI' do |ui|
+      ui.source_files = 'CNKI_Z_BaseSDK/CNKIZ_UI/**/*'
     end
 
   end
