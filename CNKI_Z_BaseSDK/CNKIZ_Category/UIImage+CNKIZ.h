@@ -78,8 +78,8 @@ typedef enum {
 
 /**
  *  把一个Image尺寸缩放到另一个尺寸。
- *  @param  view  UIView及其子类。
- *  @param  scale 屏幕放大倍数，1为原尺寸。
+ *  @param  image  原图。
+ *  @param  size  目标尺寸。
  *  return  尺寸更改后的Image。
  */
 + (UIImage *)scaleImage:(UIImage *)image toSize:(CGSize)size;

@@ -26,7 +26,7 @@
  
  用法
  
- # 最简单
+ # 最简单，永远最新
  pod  'CNKI_Z_BaseSDK'
  
  # 使用仓库中的master分支
