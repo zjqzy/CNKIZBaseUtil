@@ -22,8 +22,8 @@ Pod::Spec.new do |s|
 
   s.subspec 'CNKI_Z_BaseSDK' do |base|
 
-# base.source_files = 'CNKI_Z_BaseSDK/CNKI_Z_BaseSDK.h'
-# base.public_header_files = 'CNKI_Z_BaseSDK/CNKI_Z_BaseSDK.h'
+    base.source_files = 'CNKI_Z_BaseSDK/CNKI_Z_BaseSDK.h'
+    base.public_header_files = 'CNKI_Z_BaseSDK/CNKI_Z_BaseSDK.h'
 
     base.subspec 'CNKIZ_Category' do |category|
       category.source_files = 'CNKI_Z_BaseSDK/CNKIZ_Category/**/*'
