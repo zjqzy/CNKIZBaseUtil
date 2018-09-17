@@ -26,7 +26,8 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-#import "CNKIZ_GTMBase64.h"
+#import "CNKI_Z_GTMBase64.h"
+
 
 #define FileHashDefaultChunkSizeForReadingData 1024*8 // 8K
 
@@ -1248,7 +1249,7 @@ done:
     
     NSData *data=[NSData dataWithBytes:pEncryptPassword length:nLength];
     
-    data = [CNKIZ_GTMBase64 encodeData:data];
+    data = [CNKI_Z_GTMBase64 encodeData:data];
     NSString *strResult = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
     free(pEncryptPassword);
@@ -1266,7 +1267,7 @@ done:
     
     //base还原
     NSData *data = [strEncryptSource dataUsingEncoding:NSUTF8StringEncoding];
-    data = [CNKIZ_GTMBase64 decodeData:data];
+    data = [CNKI_Z_GTMBase64 decodeData:data];
 
     
     //加密后的明文密码
@@ -1363,7 +1364,7 @@ done:
     //NSData *data = [strSource dataUsingEncoding:NSASCIIStringEncoding]; //返回nil
     NSData *data = [strSource dataUsingEncoding:NSUTF8StringEncoding];
     
-    data = [CNKIZ_GTMBase64 encodeData:data];
+    data = [CNKI_Z_GTMBase64 encodeData:data];
     
     NSString *strResult = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     //NSString *strResult = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];  //ok   NSUTF8StringEncoding
@@ -1372,7 +1373,7 @@ done:
 -(NSString*)stringGTMBase64decode:(NSString*)strSourceEncode
 {
     //解密  ok
-    NSData *data =[CNKIZ_GTMBase64 decodeString:strSourceEncode];
+    NSData *data =[CNKI_Z_GTMBase64 decodeString:strSourceEncode];
     
 //    NSData *data = [strSourceEncode dataUsingEncoding:NSUnicodeStringEncoding];
 //    data = [GTMBase64 decodeData:data];
@@ -1676,7 +1677,7 @@ done:
     if (cryptStatus == kCCSuccess) {
         NSData *resultData = [NSData dataWithBytesNoCopy:buffer length:numBytesCrypted];
         
-        return [CNKIZ_GTMBase64 stringByEncodingData:resultData];
+        return [CNKI_Z_GTMBase64 stringByEncodingData:resultData];
     }
     free(buffer);
     return nil;
@@ -1693,7 +1694,7 @@ done:
 
     [gIv getCString:ivPtr maxLength:sizeof(ivPtr) encoding:NSUTF8StringEncoding];
     
-    NSData *data = [CNKIZ_GTMBase64 decodeData:[encryptText dataUsingEncoding:NSUTF8StringEncoding]];
+    NSData *data = [CNKI_Z_GTMBase64 decodeData:[encryptText dataUsingEncoding:NSUTF8StringEncoding]];
     NSUInteger dataLength = [data length];
     size_t bufferSize = dataLength + kCCBlockSizeAES128;
     void *buffer = malloc(bufferSize);

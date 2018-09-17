@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'CNKI_Z_BaseSDK' do |base|
 
-    # base.source_files = 'CNKI_Z_BaseSDK/CNKI_Z_BaseSDK.h'
+    base.source_files = 'CNKI_Z_BaseSDK/CNKI_Z_BaseSDK.h'
     base.public_header_files = 'CNKI_Z_BaseSDK/CNKI_Z_BaseSDK.h'
 
     base.subspec 'CNKIZ_Category' do |category|
@@ -30,7 +30,12 @@ Pod::Spec.new do |s|
     end
 
     base.subspec 'CNKIZ_Common' do |common|
+
       common.source_files = 'CNKI_Z_BaseSDK/CNKIZ_Common/**/*'
+
+      # common.dependency = ‘CNKI_Z_BaseSDK/CNKIZ_Category’
+      # common.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/CNKI_Z_BaseSDK/CNKIZ_Category"}
+
     end
 
     base.subspec 'CNKIZ_UI' do |ui|

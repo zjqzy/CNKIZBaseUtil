@@ -43,6 +43,7 @@
 		6630F68921424BA000773B2E /* CNKI_Z_UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F68521424BA000773B2E /* CNKI_Z_UICKeyChainStore.m */; };
 		6630F68B2142576E00773B2E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6630F68A2142576E00773B2E /* libstdc++.tbd */; };
 		6630F68D2142577500773B2E /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6630F68C2142577500773B2E /* libiconv.tbd */; };
+		66FDD39D214F3FE10047FE67 /* CNKI_Z_GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FDD39A214F3FE00047FE67 /* CNKI_Z_GTMBase64.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,9 @@
 		6630F68A2142576E00773B2E /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		6630F68C2142577500773B2E /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		666748E82147A79000C06C58 /* CNKI_Z_BaseSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKI_Z_BaseSDK.h; sourceTree = "<group>"; };
+		66FDD39A214F3FE00047FE67 /* CNKI_Z_GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNKI_Z_GTMBase64.m; sourceTree = "<group>"; };
+		66FDD39B214F3FE00047FE67 /* CNKI_Z_GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKI_Z_GTMBase64.h; sourceTree = "<group>"; };
+		66FDD39C214F3FE10047FE67 /* CNKI_Z_GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKI_Z_GTMDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +295,9 @@
 				6630F63D2142491F00773B2E /* CNKI_Z_File.m */,
 				6630F60C2142491F00773B2E /* CNKI_Z_GDataXMLNode.h */,
 				6630F6362142491F00773B2E /* CNKI_Z_GDataXMLNode.m */,
+				66FDD39B214F3FE00047FE67 /* CNKI_Z_GTMBase64.h */,
+				66FDD39A214F3FE00047FE67 /* CNKI_Z_GTMBase64.m */,
+				66FDD39C214F3FE10047FE67 /* CNKI_Z_GTMDefines.h */,
 				660CB2F1214A3C95004B1D7F /* CNKI_Z_Lib.h */,
 				660CB2F0214A3C94004B1D7F /* CNKI_Z_Lib.m */,
 				660CB2F7214A3D88004B1D7F /* CNKI_Z_Operation.h */,
@@ -458,6 +465,7 @@
 				660CB2F4214A3C95004B1D7F /* CNKI_Z_Lib.m in Sources */,
 				660CB2ED214A39B9004B1D7F /* CNKI_Z_ImageButtonLeft.m in Sources */,
 				6630F6772142491F00773B2E /* CNKI_Z_File.m in Sources */,
+				66FDD39D214F3FE10047FE67 /* CNKI_Z_GTMBase64.m in Sources */,
 				6630F6502142491F00773B2E /* NSObject+CNKIZ.m in Sources */,
 				6630F5AB2142484600773B2E /* main.m in Sources */,
 				6630F6732142491F00773B2E /* CNKI_Z_GDataXMLNode.m in Sources */,
