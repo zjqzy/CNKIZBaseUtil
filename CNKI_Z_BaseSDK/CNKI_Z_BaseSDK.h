@@ -10,12 +10,15 @@
  
  中国知网 基础框架 iOS平台
  
+ 子文件夹，各自独立，无依赖
+ 
  【CNKIZ_Category】类别
+ 
  【CNKIZ_Common】 通用类
+ 
  【CNKIZ_UI】     自定义UI
  
 
- 
  */
 
 

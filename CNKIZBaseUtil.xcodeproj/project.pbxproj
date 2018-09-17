@@ -306,16 +306,16 @@
 		66FDD421214F47F40047FE67 /* CNKIZ_UI */ = {
 			isa = PBXGroup;
 			children = (
-				66FDD422214F47F40047FE67 /* CNKI_Z_ImageButtonBottom.h */,
-				66FDD423214F47F40047FE67 /* CNKI_Z_ImageButtonLeft.m */,
-				66FDD424214F47F40047FE67 /* CNKI_Z_ImageButtonTop.h */,
-				66FDD425214F47F40047FE67 /* CNKI_Z_ImageButtonRight.m */,
 				66FDD426214F47F40047FE67 /* CNKI_Z_ImageButton.h */,
+				66FDD42B214F47F40047FE67 /* CNKI_Z_ImageButton.m */,
+				66FDD422214F47F40047FE67 /* CNKI_Z_ImageButtonBottom.h */,
 				66FDD427214F47F40047FE67 /* CNKI_Z_ImageButtonBottom.m */,
 				66FDD428214F47F40047FE67 /* CNKI_Z_ImageButtonLeft.h */,
+				66FDD423214F47F40047FE67 /* CNKI_Z_ImageButtonLeft.m */,
 				66FDD429214F47F40047FE67 /* CNKI_Z_ImageButtonRight.h */,
+				66FDD425214F47F40047FE67 /* CNKI_Z_ImageButtonRight.m */,
+				66FDD424214F47F40047FE67 /* CNKI_Z_ImageButtonTop.h */,
 				66FDD42A214F47F40047FE67 /* CNKI_Z_ImageButtonTop.m */,
-				66FDD42B214F47F40047FE67 /* CNKI_Z_ImageButton.m */,
 			);
 			path = CNKIZ_UI;
 			sourceTree = "<group>";
