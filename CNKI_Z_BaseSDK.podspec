@@ -26,6 +26,7 @@ Pod::Spec.new do |s|
 
     # 在这个属性中声明过的.h文件能够使用<>方法联想调用（可选属性）
     base.public_header_files = 'CNKI_Z_BaseSDK/CNKI_Z_BaseSDK.h'
+    # base.public_header_files = 'CNKI_Z_BaseSDK/**/*.h'
 
     base.subspec 'CNKIZ_Category' do |category|
       category.source_files = 'CNKI_Z_BaseSDK/CNKIZ_Category/**/*'
@@ -44,7 +45,7 @@ Pod::Spec.new do |s|
 
   s.frameworks = "UIKit", "Foundation"
 
-  s.libraries = "iconv", "xml2" ,"stdc++"
+  s.libraries = "iconv", "xml2"
   s.requires_arc = true
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
