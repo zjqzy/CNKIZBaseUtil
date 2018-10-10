@@ -118,7 +118,13 @@ typedef enum {
 
 //分2份
 +(NSArray*)splitImageIntoTwoParts:(UIImage*)image;
-
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
 //颜色图
 -(UIImage*)rt_tintedImageWithColor:(UIColor*)color rect:(CGRect)rect level:(CGFloat)level;
+
++ (UIImage *)z_imageWithColor:(UIColor *)color;
++ (UIImage *)z_imageWithColor:(UIColor *)color size:(CGSize)size;
+
 @end
