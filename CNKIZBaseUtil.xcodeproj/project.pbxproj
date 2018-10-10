@@ -18,6 +18,7 @@
 		6630F68321424AF500773B2E /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6630F68221424AF500773B2E /* libxml2.tbd */; };
 		6630F68B2142576E00773B2E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6630F68A2142576E00773B2E /* libstdc++.tbd */; };
 		6630F68D2142577500773B2E /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6630F68C2142577500773B2E /* libiconv.tbd */; };
+		6681A8EC216D873900CBD43E /* UITabBar+CNKIZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 6681A8EA216D873900CBD43E /* UITabBar+CNKIZ.m */; };
 		66FDD40C214F46D80047FE67 /* UIImageView+CNKIZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FDD3DE214F46D80047FE67 /* UIImageView+CNKIZ.m */; };
 		66FDD40D214F46D80047FE67 /* NSObject+CNKIZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FDD3E1214F46D80047FE67 /* NSObject+CNKIZ.m */; };
 		66FDD40E214F46D80047FE67 /* UIView+CNKIZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FDD3E3214F46D80047FE67 /* UIView+CNKIZ.m */; };
@@ -83,6 +84,8 @@
 		6630F68221424AF500773B2E /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		6630F68A2142576E00773B2E /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		6630F68C2142577500773B2E /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		6681A8EA216D873900CBD43E /* UITabBar+CNKIZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+CNKIZ.m"; sourceTree = "<group>"; };
+		6681A8EB216D873900CBD43E /* UITabBar+CNKIZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+CNKIZ.h"; sourceTree = "<group>"; };
 		66FDD3DE214F46D80047FE67 /* UIImageView+CNKIZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CNKIZ.m"; sourceTree = "<group>"; };
 		66FDD3DF214F46D80047FE67 /* NSInvocation+CNKIZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+CNKIZ.h"; sourceTree = "<group>"; };
 		66FDD3E0214F46D80047FE67 /* NSString+CNKIZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CNKIZ.h"; sourceTree = "<group>"; };
@@ -248,6 +251,8 @@
 		66FDD3DD214F46D80047FE67 /* CNKIZ_Category */ = {
 			isa = PBXGroup;
 			children = (
+				6681A8EB216D873900CBD43E /* UITabBar+CNKIZ.h */,
+				6681A8EA216D873900CBD43E /* UITabBar+CNKIZ.m */,
 				66FDD3F6214F46D80047FE67 /* CLLocation+CNKIZ.h */,
 				66FDD3E7214F46D80047FE67 /* CLLocation+CNKIZ.m */,
 				66FDD3EA214F46D80047FE67 /* CNKIZ_GTMBase64.h */,
@@ -471,6 +476,7 @@
 				66FDD42F214F47F40047FE67 /* CNKI_Z_ImageButtonTop.m in Sources */,
 				66FDD410214F46D80047FE67 /* UIWebView+CNKIZ.m in Sources */,
 				66FDD414214F46D80047FE67 /* NSString+CNKIZ.m in Sources */,
+				6681A8EC216D873900CBD43E /* UITabBar+CNKIZ.m in Sources */,
 				66FDD418214F46D80047FE67 /* CNKI_Z_Queue.m in Sources */,
 				66FDD42D214F47F40047FE67 /* CNKI_Z_ImageButtonRight.m in Sources */,
 				66FDD415214F46D80047FE67 /* NSInvocation+CNKIZ.m in Sources */,
