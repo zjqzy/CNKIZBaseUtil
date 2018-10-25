@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66067F93218199360042F2B6 /* CButtonProgressLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 66067F8F218199350042F2B6 /* CButtonProgressLayer.m */; };
+		66067F94218199360042F2B6 /* CButtonProgressCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 66067F91218199360042F2B6 /* CButtonProgressCtrl.m */; };
 		6630F59D2142484400773B2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F59C2142484400773B2E /* AppDelegate.m */; };
 		6630F5A02142484400773B2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6630F59F2142484400773B2E /* ViewController.m */; };
 		6630F5A32142484400773B2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6630F5A12142484400773B2E /* Main.storyboard */; };
@@ -65,6 +67,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		66067F8F218199350042F2B6 /* CButtonProgressLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CButtonProgressLayer.m; sourceTree = "<group>"; };
+		66067F90218199360042F2B6 /* CButtonProgressCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CButtonProgressCtrl.h; sourceTree = "<group>"; };
+		66067F91218199360042F2B6 /* CButtonProgressCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CButtonProgressCtrl.m; sourceTree = "<group>"; };
+		66067F92218199360042F2B6 /* CButtonProgressLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CButtonProgressLayer.h; sourceTree = "<group>"; };
 		6630F5982142484400773B2E /* CNKIZBaseUtil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CNKIZBaseUtil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6630F59B2142484400773B2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6630F59C2142484400773B2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -311,6 +317,10 @@
 		66FDD421214F47F40047FE67 /* CNKIZ_UI */ = {
 			isa = PBXGroup;
 			children = (
+				66067F90218199360042F2B6 /* CButtonProgressCtrl.h */,
+				66067F91218199360042F2B6 /* CButtonProgressCtrl.m */,
+				66067F92218199360042F2B6 /* CButtonProgressLayer.h */,
+				66067F8F218199350042F2B6 /* CButtonProgressLayer.m */,
 				66FDD426214F47F40047FE67 /* CNKI_Z_ImageButton.h */,
 				66FDD42B214F47F40047FE67 /* CNKI_Z_ImageButton.m */,
 				66FDD422214F47F40047FE67 /* CNKI_Z_ImageButtonBottom.h */,
@@ -480,9 +490,11 @@
 				66FDD418214F46D80047FE67 /* CNKI_Z_Queue.m in Sources */,
 				66FDD42D214F47F40047FE67 /* CNKI_Z_ImageButtonRight.m in Sources */,
 				66FDD415214F46D80047FE67 /* NSInvocation+CNKIZ.m in Sources */,
+				66067F94218199360042F2B6 /* CButtonProgressCtrl.m in Sources */,
 				66FDD417214F46D80047FE67 /* CNKIZ_GTMBase64.m in Sources */,
 				66FDD42E214F47F40047FE67 /* CNKI_Z_ImageButtonBottom.m in Sources */,
 				6630F5AB2142484600773B2E /* main.m in Sources */,
+				66067F93218199360042F2B6 /* CButtonProgressLayer.m in Sources */,
 				6630F59D2142484400773B2E /* AppDelegate.m in Sources */,
 				66FDD41A214F46D80047FE67 /* CNKI_Z_Device.m in Sources */,
 			);
