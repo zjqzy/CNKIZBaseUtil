@@ -20,6 +20,8 @@
 		6630F68321424AF500773B2E /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6630F68221424AF500773B2E /* libxml2.tbd */; };
 		6630F68B2142576E00773B2E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6630F68A2142576E00773B2E /* libstdc++.tbd */; };
 		6630F68D2142577500773B2E /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6630F68C2142577500773B2E /* libiconv.tbd */; };
+		666CC0FF21927B1A0070CD9F /* CAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 666CC0FD21927B1A0070CD9F /* CAlertController.m */; };
+		666CC10321927C0F0070CD9F /* CAlertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 666CC10121927C0F0070CD9F /* CAlertCell.m */; };
 		6681A8EC216D873900CBD43E /* UITabBar+CNKIZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 6681A8EA216D873900CBD43E /* UITabBar+CNKIZ.m */; };
 		66FDD40C214F46D80047FE67 /* UIImageView+CNKIZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FDD3DE214F46D80047FE67 /* UIImageView+CNKIZ.m */; };
 		66FDD40D214F46D80047FE67 /* NSObject+CNKIZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FDD3E1214F46D80047FE67 /* NSObject+CNKIZ.m */; };
@@ -90,6 +92,10 @@
 		6630F68221424AF500773B2E /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		6630F68A2142576E00773B2E /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		6630F68C2142577500773B2E /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		666CC0FB21927B1A0070CD9F /* CAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAlertController.h; sourceTree = "<group>"; };
+		666CC0FD21927B1A0070CD9F /* CAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAlertController.m; sourceTree = "<group>"; };
+		666CC10121927C0F0070CD9F /* CAlertCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAlertCell.m; sourceTree = "<group>"; };
+		666CC10221927C0F0070CD9F /* CAlertCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAlertCell.h; sourceTree = "<group>"; };
 		6681A8EA216D873900CBD43E /* UITabBar+CNKIZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+CNKIZ.m"; sourceTree = "<group>"; };
 		6681A8EB216D873900CBD43E /* UITabBar+CNKIZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+CNKIZ.h"; sourceTree = "<group>"; };
 		66FDD3DE214F46D80047FE67 /* UIImageView+CNKIZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CNKIZ.m"; sourceTree = "<group>"; };
@@ -317,6 +323,10 @@
 		66FDD421214F47F40047FE67 /* CNKIZ_UI */ = {
 			isa = PBXGroup;
 			children = (
+				666CC10221927C0F0070CD9F /* CAlertCell.h */,
+				666CC10121927C0F0070CD9F /* CAlertCell.m */,
+				666CC0FB21927B1A0070CD9F /* CAlertController.h */,
+				666CC0FD21927B1A0070CD9F /* CAlertController.m */,
 				66067F90218199360042F2B6 /* CButtonProgressCtrl.h */,
 				66067F91218199360042F2B6 /* CButtonProgressCtrl.m */,
 				66067F92218199360042F2B6 /* CButtonProgressLayer.h */,
@@ -474,8 +484,10 @@
 				66FDD41B214F46D80047FE67 /* CNKI_Z_Exception.m in Sources */,
 				66FDD416214F46D80047FE67 /* NSDate+CNKIZ.m in Sources */,
 				66FDD41E214F46D80047FE67 /* CNKI_Z_GDataXMLNode.m in Sources */,
+				666CC0FF21927B1A0070CD9F /* CAlertController.m in Sources */,
 				66FDD413214F46D80047FE67 /* UIImage+CNKIZ.m in Sources */,
 				66FDD430214F47F40047FE67 /* CNKI_Z_ImageButton.m in Sources */,
+				666CC10321927C0F0070CD9F /* CAlertCell.m in Sources */,
 				66FDD411214F46D80047FE67 /* CLLocation+CNKIZ.m in Sources */,
 				66FDD41C214F46D80047FE67 /* CNKI_Z_Operation.m in Sources */,
 				66FDD412214F46D80047FE67 /* UIColor+CNKIZ.m in Sources */,
