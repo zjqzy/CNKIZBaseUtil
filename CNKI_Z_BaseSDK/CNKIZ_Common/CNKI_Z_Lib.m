@@ -1097,7 +1097,17 @@ done:
     return long1;
     //NSLog(@"iValue2 = %lld", long1);
 }
-
+-(NSData *)toJSONData:(id)theData
+{
+    NSError *error = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:theData options:NSJSONWritingPrettyPrinted error:&error];
+    
+    if ([jsonData length] > 0 && error == nil){
+        return jsonData;
+    }else{
+        return nil;
+    }
+}
 -(NSString*)UIColorToNSString:(UIColor*)color
 {
     // uicolor rgba 转 string 

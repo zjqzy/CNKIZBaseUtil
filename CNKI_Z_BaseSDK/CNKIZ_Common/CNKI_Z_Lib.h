@@ -137,7 +137,7 @@
 
 -(NSString*)longToHexSring:(long long)long1; //  long  转  hex 字符串
 -(long long)hexStringToLong:(NSString*)hexStr1;
-
+-(NSData *)toJSONData:(id)theData;  // 
 /**
  颜色转换
  */
