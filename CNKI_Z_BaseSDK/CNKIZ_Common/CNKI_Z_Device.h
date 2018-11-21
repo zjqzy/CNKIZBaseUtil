@@ -94,10 +94,6 @@
 @property (strong, nonatomic) NSString *fontsPath;    //下载字体保存路径
 @property (strong, nonatomic) NSString *epubFontsPath;    //下载epub8种字体保存路径
 
-@property (strong, nonatomic) NSString *cajFolder;//caj 文件夹
-@property (strong, nonatomic) NSString *epubFolder;//epub 文件夹
-@property (strong, nonatomic) NSString *localFolder;//local 文件夹
-@property (strong, nonatomic) NSString *wifiFolder;//wifi 文件夹
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
