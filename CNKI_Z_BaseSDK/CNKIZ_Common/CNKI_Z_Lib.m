@@ -2511,19 +2511,10 @@ int g2u(char *inbuf, size_t inlen, char *outbuf,size_t outlen)
 
 - (UIImage *)imgName:(NSString *)name directory:(NSString *)directory {
     //获取本地图片
-    if ([name containsString:@"."]) {
-        if (![name containsString:@"@"]) {
-            NSArray *arr = [name componentsSeparatedByString:@"."];
-            if (arr.count==2) {
-                name = [NSString stringWithFormat:@"%@@%0.0fx.%@", arr.firstObject, UIScreen.mainScreen.scale, arr.lastObject];
-            }
-        }
-    } else {
-        name = [NSString stringWithFormat:@"%@@%0.0fx.png", name, UIScreen.mainScreen.scale];
-    }
     directory = [directory containsString:@"."]?directory:[NSString stringWithFormat:@"%@.bundle", directory];
-    NSString *path = [NSBundle.mainBundle pathForResource:name ofType:nil inDirectory:directory];
-    return path?[[UIImage alloc] initWithContentsOfFile:path]:nil;
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];//NSBundle.mainBundle
+    NSString *path = [[bundle pathForResource:directory ofType:nil] stringByAppendingPathComponent:name];
+    return path?[UIImage imageNamed:path]:nil;
 }
 
 - (UIImage *)imgName:(NSString *)name directory:(NSString *)directory alpha:(CGFloat)alpha {
