@@ -1,14 +1,15 @@
 //
-//  NSObject+Association.m
+//  NSObject+CNKI_ZJQ.m
 //
 
 #import <objc/runtime.h>
 
-#import "NSObject+CNKIZ.h"
+#import "NSObject+CNKI_ZJQ.h"
 
-@implementation NSObject (CNKIZ)
+@implementation NSObject (CNKI_ZJQ)
 
-static char associatedObjectsKey;
+#pragma mark - 关联对象
+static char zjq_associatedObjectsKey;
 
 - (id)associatedObjectForKey:(NSString*)key {
     
@@ -17,22 +18,20 @@ static char associatedObjectsKey;
         return nil;
     }
     
-    NSMutableDictionary *dict = objc_getAssociatedObject(self, &associatedObjectsKey);
+    NSMutableDictionary *dict = objc_getAssociatedObject(self, &zjq_associatedObjectsKey);
     return [dict objectForKey:key];
 }
 
 - (void)setAssociatedObject:(id)object forKey:(NSString*)key
 {
-    // object 为 nil ，相当于删除
+    // object 可为 nil ，相当于删除
     // key 不能为nil 或 空
-    
     
     if ([key length]<1) {
         return;
     }
     
-    
-    NSMutableDictionary *dict = objc_getAssociatedObject(self, &associatedObjectsKey);
+    NSMutableDictionary *dict = objc_getAssociatedObject(self, &zjq_associatedObjectsKey);
     if (!dict) {
         dict = [[NSMutableDictionary alloc] init];
         
@@ -46,7 +45,7 @@ static char associatedObjectsKey;
          OBJC_ASSOCIATION_RETAIN等价于@property(strong,atomic)。
          OBJC_ASSOCIATION_COPY等价于@property(copy, atomic)。
          */
-        objc_setAssociatedObject(self, &associatedObjectsKey, dict, OBJC_ASSOCIATION_RETAIN);
+        objc_setAssociatedObject(self, &zjq_associatedObjectsKey, dict, OBJC_ASSOCIATION_RETAIN);
     }
     
     dict[key]=object;

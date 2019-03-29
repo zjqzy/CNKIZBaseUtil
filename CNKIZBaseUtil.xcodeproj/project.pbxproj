@@ -21,9 +21,9 @@
 		6630F68D2142577500773B2E /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6630F68C2142577500773B2E /* libiconv.tbd */; };
 		6681A8EC216D873900CBD43E /* UITabBar+CNKIZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 6681A8EA216D873900CBD43E /* UITabBar+CNKIZ.m */; };
 		66FDD40C214F46D80047FE67 /* UIImageView+CNKIZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FDD3DE214F46D80047FE67 /* UIImageView+CNKIZ.m */; };
-		66FDD40D214F46D80047FE67 /* NSObject+CNKIZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FDD3E1214F46D80047FE67 /* NSObject+CNKIZ.m */; };
+		66FDD40D214F46D80047FE67 /* NSObject+CNKI_ZJQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FDD3E1214F46D80047FE67 /* NSObject+CNKI_ZJQ.m */; };
 		66FDD40E214F46D80047FE67 /* UIView+CNKIZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FDD3E3214F46D80047FE67 /* UIView+CNKIZ.m */; };
-		66FDD40F214F46D80047FE67 /* NSData+CNKIZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FDD3E4214F46D80047FE67 /* NSData+CNKIZ.m */; };
+		66FDD40F214F46D80047FE67 /* NSData+CNKI_ZJQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FDD3E4214F46D80047FE67 /* NSData+CNKI_ZJQ.m */; };
 		66FDD410214F46D80047FE67 /* UIWebView+CNKIZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FDD3E5214F46D80047FE67 /* UIWebView+CNKIZ.m */; };
 		66FDD411214F46D80047FE67 /* CLLocation+CNKIZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FDD3E7214F46D80047FE67 /* CLLocation+CNKIZ.m */; };
 		66FDD412214F46D80047FE67 /* UIColor+CNKIZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FDD3E8214F46D80047FE67 /* UIColor+CNKIZ.m */; };
@@ -92,10 +92,10 @@
 		66FDD3DE214F46D80047FE67 /* UIImageView+CNKIZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CNKIZ.m"; sourceTree = "<group>"; };
 		66FDD3DF214F46D80047FE67 /* NSInvocation+CNKIZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+CNKIZ.h"; sourceTree = "<group>"; };
 		66FDD3E0214F46D80047FE67 /* NSString+CNKIZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CNKIZ.h"; sourceTree = "<group>"; };
-		66FDD3E1214F46D80047FE67 /* NSObject+CNKIZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CNKIZ.m"; sourceTree = "<group>"; };
+		66FDD3E1214F46D80047FE67 /* NSObject+CNKI_ZJQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CNKI_ZJQ.m"; sourceTree = "<group>"; };
 		66FDD3E2214F46D80047FE67 /* UIImage+CNKIZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CNKIZ.h"; sourceTree = "<group>"; };
 		66FDD3E3214F46D80047FE67 /* UIView+CNKIZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CNKIZ.m"; sourceTree = "<group>"; };
-		66FDD3E4214F46D80047FE67 /* NSData+CNKIZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CNKIZ.m"; sourceTree = "<group>"; };
+		66FDD3E4214F46D80047FE67 /* NSData+CNKI_ZJQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CNKI_ZJQ.m"; sourceTree = "<group>"; };
 		66FDD3E5214F46D80047FE67 /* UIWebView+CNKIZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+CNKIZ.m"; sourceTree = "<group>"; };
 		66FDD3E6214F46D80047FE67 /* CNKIZ_GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKIZ_GTMDefines.h; sourceTree = "<group>"; };
 		66FDD3E7214F46D80047FE67 /* CLLocation+CNKIZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+CNKIZ.m"; sourceTree = "<group>"; };
@@ -104,12 +104,12 @@
 		66FDD3EA214F46D80047FE67 /* CNKIZ_GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKIZ_GTMBase64.h; sourceTree = "<group>"; };
 		66FDD3EB214F46D80047FE67 /* UIImage+CNKIZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CNKIZ.m"; sourceTree = "<group>"; };
 		66FDD3EC214F46D80047FE67 /* NSString+CNKIZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CNKIZ.m"; sourceTree = "<group>"; };
-		66FDD3ED214F46D80047FE67 /* NSObject+CNKIZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CNKIZ.h"; sourceTree = "<group>"; };
+		66FDD3ED214F46D80047FE67 /* NSObject+CNKI_ZJQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CNKI_ZJQ.h"; sourceTree = "<group>"; };
 		66FDD3EE214F46D80047FE67 /* NSInvocation+CNKIZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+CNKIZ.m"; sourceTree = "<group>"; };
 		66FDD3EF214F46D80047FE67 /* UIImageView+CNKIZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CNKIZ.h"; sourceTree = "<group>"; };
 		66FDD3F0214F46D80047FE67 /* UIWebView+CNKIZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+CNKIZ.h"; sourceTree = "<group>"; };
 		66FDD3F1214F46D80047FE67 /* UIView+CNKIZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CNKIZ.h"; sourceTree = "<group>"; };
-		66FDD3F2214F46D80047FE67 /* NSData+CNKIZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CNKIZ.h"; sourceTree = "<group>"; };
+		66FDD3F2214F46D80047FE67 /* NSData+CNKI_ZJQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CNKI_ZJQ.h"; sourceTree = "<group>"; };
 		66FDD3F3214F46D80047FE67 /* NSDate+CNKIZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CNKIZ.m"; sourceTree = "<group>"; };
 		66FDD3F4214F46D80047FE67 /* CNKIZ_GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNKIZ_GTMBase64.m; sourceTree = "<group>"; };
 		66FDD3F5214F46D80047FE67 /* UIColor+CNKIZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CNKIZ.h"; sourceTree = "<group>"; };
@@ -259,14 +259,14 @@
 				66FDD3EA214F46D80047FE67 /* CNKIZ_GTMBase64.h */,
 				66FDD3F4214F46D80047FE67 /* CNKIZ_GTMBase64.m */,
 				66FDD3E6214F46D80047FE67 /* CNKIZ_GTMDefines.h */,
-				66FDD3F2214F46D80047FE67 /* NSData+CNKIZ.h */,
-				66FDD3E4214F46D80047FE67 /* NSData+CNKIZ.m */,
+				66FDD3F2214F46D80047FE67 /* NSData+CNKI_ZJQ.h */,
+				66FDD3E4214F46D80047FE67 /* NSData+CNKI_ZJQ.m */,
 				66FDD3E9214F46D80047FE67 /* NSDate+CNKIZ.h */,
 				66FDD3F3214F46D80047FE67 /* NSDate+CNKIZ.m */,
 				66FDD3DF214F46D80047FE67 /* NSInvocation+CNKIZ.h */,
 				66FDD3EE214F46D80047FE67 /* NSInvocation+CNKIZ.m */,
-				66FDD3ED214F46D80047FE67 /* NSObject+CNKIZ.h */,
-				66FDD3E1214F46D80047FE67 /* NSObject+CNKIZ.m */,
+				66FDD3ED214F46D80047FE67 /* NSObject+CNKI_ZJQ.h */,
+				66FDD3E1214F46D80047FE67 /* NSObject+CNKI_ZJQ.m */,
 				66FDD3E0214F46D80047FE67 /* NSString+CNKIZ.h */,
 				66FDD3EC214F46D80047FE67 /* NSString+CNKIZ.m */,
 				66FDD3F5214F46D80047FE67 /* UIColor+CNKIZ.h */,
@@ -476,8 +476,8 @@
 				66FDD41C214F46D80047FE67 /* CNKI_Z_Operation.m in Sources */,
 				66FDD412214F46D80047FE67 /* UIColor+CNKIZ.m in Sources */,
 				6630F5A02142484400773B2E /* ViewController.m in Sources */,
-				66FDD40D214F46D80047FE67 /* NSObject+CNKIZ.m in Sources */,
-				66FDD40F214F46D80047FE67 /* NSData+CNKIZ.m in Sources */,
+				66FDD40D214F46D80047FE67 /* NSObject+CNKI_ZJQ.m in Sources */,
+				66FDD40F214F46D80047FE67 /* NSData+CNKI_ZJQ.m in Sources */,
 				66FDD41D214F46D80047FE67 /* CNKI_Z_Lib.m in Sources */,
 				66FDD42F214F47F40047FE67 /* CNKI_Z_ImageButtonTop.m in Sources */,
 				66FDD410214F46D80047FE67 /* UIWebView+CNKIZ.m in Sources */,

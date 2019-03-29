@@ -1,14 +1,12 @@
 //
-//  NSObject+Association.h
+//  NSObject+CNKI_ZJQ.h
 //
-//  Created by zhu jianqi on 2018/9/20.
-//  Copyright © 2018年 zhu jianqi. All rights reserved.
+//  Created by zhu jianqi.
 //  Email : zhu.jian.qi@163.com
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (CNKIZ)
-
+@interface NSObject (CNKI_ZJQ)
 
 /**
  关联对象 - 读取
