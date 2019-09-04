@@ -1728,14 +1728,6 @@ done:
     free(buffer);
     return nil;
 }
--(NSString*)getWebViewInnerHtml: (UIWebView *) webView
-{
-    //返回webView实际加载的网址
-    if( ! webView ){
-        return nil;
-    }
-    return [webView stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"];
-}
 
 -(BOOL)mySystemVersionCreaterThanOrEqualTo:(NSString*)compareVersion
 {

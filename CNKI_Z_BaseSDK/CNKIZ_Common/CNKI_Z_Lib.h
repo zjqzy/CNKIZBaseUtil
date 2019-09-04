@@ -182,11 +182,6 @@
 -(NSString *)AES128Encrypt:(NSString *)plainText withKey:(NSString*)gkey withgIv:(NSString*)gIv;
 -(NSString *)AES128Decrypt:(NSString *)encryptText withKey:(NSString*)gkey withgIv:(NSString*)gIv;
 
-/*
- web
- 当前webView加载的实际网址
- */
--(NSString*)getWebViewInnerHtml:(UIWebView *) webView;
 
 /**
  设备
