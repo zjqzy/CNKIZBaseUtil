@@ -77,8 +77,8 @@ static CNKI_Z_Device *s_device = nil;
 
     {
         //BA02A2FB-E934-442D-93F5-14B489653F2E
-        NSString *deviceId = [CNKI_Z_UICKeyChainStore stringForKey:@"deviceId" service:@"TTKN"];
-        if ([deviceId length]<2) {
+        NSString *deviceId = [CNKI_Z_UICKeyChainStore stringForKey:@"deviceId" service:@"TTKN"]?:@"";
+        if ([deviceId length]<8) {
             deviceId = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
             [CNKI_Z_UICKeyChainStore setString:deviceId forKey:@"deviceId" service:@"TTKN"];
         }
